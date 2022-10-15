@@ -1,0 +1,108 @@
+*** Still thinking through best implementations***
+Pseudocode:
+* Requirement
+** Comment
+- implementation
+
+IMPORT CONTRACTS
+	RefundableEscrow
+	paymentSplitter
+
+STRUCTS:
+
+User Struct
+	name(string)
+	userId(int)
+	taskProvided(int)
+	numberOfTaskTaken(int)
+	taskCompleted(int)
+	rating(int)
+
+Task Struct
+	taskId(int)
+	title(string)
+	description(string)
+	duration(int)
+	payPrice(int)
+	installmentPlan(int)
+	milestoneCompleted(int)
+	stage (enum(Free,Taken,Disputed,Settled))
+	creator(address)
+	currentWorker(payable address)
+	
+** Mappings **
+
+FUNCTIONS:
+
+CreateAccount
+	name
+	id(created automatically)
+	
+CreateTask
+	*Must be a registered user
+
+	description
+	amount(Token or Ether)
+	duration
+	installmentPlan
+
+AcceptTask
+	* Must be a registered user
+	* Cant accept an already taken task
+	- Task is marked as taken
+	- Set user as current worker
+	taskId
+
+milestoneCompleted
+	** This is to be called by worker after completing each
+	** milestone
+	* Task must be marked as Taken
+	* Must be the current task worker
+	taskId	
+
+ApproveTaskMilestoneAndPay
+	* Must be creator of said task
+	taskId
+
+
+AppealByCreator
+	* Used to escalate issues to admin
+	taskId
+
+AppealByWorker
+	* Same as AppealByCreator but for workers
+	taskId
+reverseToCreator
+	* Can only be called when task is taken byt past deadline
+	* called by creator
+	taskId
+** ADMIN FUNCTIONS **
+
+ReverseFundsToCreator
+	* Can only be called when task is disputed
+	- Sends funds to creator if timeElasped and task was not delivered
+	taskId
+ReleaseFundsToWorker
+	*Can only be called when task is in disputed state
+	taaskId
+DestroyEscrow
+
+RetrieveFunds
+
+
+
+** GETTER FUNCTIONS **
+
+getUserInfo
+	userId
+getTaskInfo
+	taskId
+getTasksByUser
+	userId
+getTaskCreator
+	taskId
+getCurrentTaskWorker
+	taskId
+getAllTasks
+
+getAllTakenTasks
