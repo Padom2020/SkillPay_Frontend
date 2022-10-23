@@ -1,0 +1,59 @@
+import Link from 'next/link';
+import { BsPerson } from 'react-icons/bs';
+import { AiOutlineLogin } from 'react-icons/ai';
+import { useRouter } from 'next/router';
+
+type Props = {};
+
+const Header = (props: Props) => {
+   const router = useRouter();
+
+   return (
+      <header className='max-w-[90%] mx-auto flex flex-row items-start xl:items-center sticky top-0 py-3'>
+         <h2 className='flex-1'>
+            <span className='text-primary font-semibold'>Skill</span>
+            <span className='text-orange font-semibold'>Pay</span>
+         </h2>
+         <div className='flex flex-row space-x-10'>
+            <div className='flex items-center space-x-4'>
+               <Link href='/'>
+                  <a className={router.pathname == '/' ? 'text-orange' : ''}>
+                     Home
+                  </a>
+               </Link>
+               <Link href='/about'>
+                  <a
+                     className={
+                        router.pathname == '/about' ? 'text-orange' : ''
+                     }
+                  >
+                     Find Work
+                  </a>
+               </Link>
+               <Link href='/about'>
+                  <a className={router.pathname == '#' ? 'text-orange' : ''}>
+                     Find Freelancers
+                  </a>
+               </Link>
+               <Link href='/about'>
+                  <a className={router.pathname == '#' ? 'text-orange' : ''}>
+                     Courses
+                  </a>
+               </Link>
+            </div>
+            <div className='flex flex-row items-center space-x-2'>
+               <button className='flex flex-row items-center bg-white border border-gray-400 px-2 py-1 space-x-1 text-sm rounded-md'>
+                  <BsPerson />
+                  <span>Sign Up</span>
+               </button>
+               <button className='flex flex-row items-center bg-orange text-white px-2 py-1 space-x-1 text-sm rounded-md'>
+                  <AiOutlineLogin />
+                  <span>Login</span>
+               </button>
+            </div>
+         </div>
+      </header>
+   );
+};
+
+export default Header;
