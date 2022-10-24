@@ -6,12 +6,7 @@ const Home = () => {
 
    return (
       <div>
-         {freelancers &&
-            (freelancers as any).map((freelancer: freelancerTRype) => (
-               <div key={freelancer.id} className=''>
-                  {freelancer.title}
-               </div>
-            ))}
+        
       </div>
    );
 };
