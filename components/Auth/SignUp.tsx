@@ -33,20 +33,28 @@ import {
 
             <Center flexDir="column">
             <Text className='text-primary font-bold'>
-            Hi, Welcome Back!
+            Sign Up
           </Text>
           <Text className='space-x-1 text-sm rounded-md'>
-            Login to your account
+          Enter your information to create your account
           </Text>
             </Center>
-        
+            <FormControl isRequired>
+            <Input
+              onChange={handleInputChange}
+              bg="white"
+              color="brand.100"
+              name="name"
+              placeholder="enter full name"
+            />
+          </FormControl>
           <FormControl isRequired>
             <Input
               onChange={handleInputChange}
               bg="white"
               color="brand.100"
               name="email"
-              placeholder="enter Email Address"
+              placeholder="enter email address"
             />
           </FormControl>
           <FormControl isRequired>
@@ -56,29 +64,32 @@ import {
               color="brand.100"
               name="password"
               type="password"
-              placeholder="enter password"
+              placeholder="create password"
             />
           </FormControl>
-            <Center justifyContent={"space-between"}>
-          <Text>Forgotten Password?</Text>
-            <Box color='tomato'>
-            <Link  href="/forgot-password" >Reset Password</Link>
-            </Box>
-            </Center>
-  
+          <FormControl isRequired>
+            <Input
+              onChange={handleInputChange}
+              bg="white"
+              color="brand.100"
+              name="password"
+              type="conf password"
+              placeholder="confirm password"
+            />
+          </FormControl>
           <Button type="submit" bg="#F24726">
-            Login
+            Sign Up Now
           </Button>
           <Center gap={5} justifyContent={"space-between"}>
-            <Text> Don’t have an account yet? </Text>
+            <Text> Already have an account? </Text>
             <Box color='tomato' as="span" >
-              <Link href="/signup">Create account</Link>
+              <Link href="/signup">Login</Link>
             </Box>
 
           </Center>
           <Center>
           <Text className=' space-x-1 text-sm rounded-md'>
-            OR
+            Or
           </Text>
           </Center>
           
