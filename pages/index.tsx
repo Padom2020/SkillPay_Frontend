@@ -4,13 +4,15 @@ import Home from './home';
 
 const IndexPage = () => (
    <Layout title='SkillPay'>
+      <section>
+         <Home />
+      </section>
       <h1>Hello Next.js 👋</h1>
       <p>
          <Link href='/about'>
             <a>About</a>
          </Link>
       </p>
-      <Home />
    </Layout>
 );
 
