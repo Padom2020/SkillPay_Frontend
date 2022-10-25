@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import BannerImage from '../assets/images/bannerimg.png';
+import BannerImage from '../assets/images/bannergirlnew.png';
 import { MdWorkOutline, MdGroups } from 'react-icons/md';
 import { BiSearch } from 'react-icons/bi';
 import { BsCheckCircle } from 'react-icons/bs';
