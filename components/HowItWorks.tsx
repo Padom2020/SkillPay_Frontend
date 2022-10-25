@@ -18,7 +18,7 @@ const HowItWorks = (props: Props) => {
                   <MdOutlinePersonOutline className='text-white' />
                </span>
                <p className='font-bold'>Create Account</p>
-               <p className='text-xs'>
+               <p className='text-xs text-gray-400'>
                   First you have to create an account here
                </p>
             </div>
@@ -26,8 +26,8 @@ const HowItWorks = (props: Props) => {
                <span className='bg-primary p-2 rounded-full'>
                   <MdWorkOutline className='text-white' />
                </span>
-               <p className='font-bold'>Create Account</p>
-               <p className='text-xs'>
+               <p className='font-bold'>Search Work</p>
+               <p className='text-xs text-gray-400'>
                   First you have to create an account here
                </p>
             </div>
@@ -35,8 +35,8 @@ const HowItWorks = (props: Props) => {
                <span className='bg-[#0CA789] p-2 rounded-full'>
                   <AiOutlineSave className='text-white' />
                </span>
-               <p className='font-bold'>Create Account</p>
-               <p className='text-xs'>
+               <p className='font-bold'>Save and apply</p>
+               <p className='text-xs text-gray-400'>
                   First you have to create an account here
                </p>
             </div>

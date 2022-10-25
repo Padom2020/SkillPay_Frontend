@@ -1,7 +1,6 @@
-import { freelancers, PostedJobs } from '../mockData';
-import { freelancerTRype } from '../interfaces';
 import Banner from '../components/Banner';
 import HowItWorks from '../components/HowItWorks';
+import Freelancers from '../components/Freelancers';
 
 const Home = () => {
    //    console.log(PostedJobs);
@@ -9,8 +8,8 @@ const Home = () => {
    return (
       <div className='relative'>
          <Banner />
-
          <HowItWorks />
+         <Freelancers />
       </div>
    );
 };
