@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { BsPerson } from 'react-icons/bs';
 import { AiOutlineLogin } from 'react-icons/ai';
 import { useRouter } from 'next/router';
+import { Box } from '@chakra-ui/react';
+import WrapContent from './Layout/WrapContent';
 
 type Props = {};
 
@@ -9,7 +11,9 @@ const Header = (props: Props) => {
    const router = useRouter();
 
    return (
-      <header className='max-w-[90%] mx-auto flex flex-row items-start xl:items-center sticky top-0 py-3'>
+      <Box as="header">
+         <WrapContent >
+      <div className='mx-auto flex flex-row items-start xl:items-center sticky top-0 py-3'>
          <h2 className='flex-1'>
             <span className='text-primary font-semibold'>Skill</span>
             <span className='text-orange font-semibold'>Pay</span>
@@ -26,7 +30,7 @@ const Header = (props: Props) => {
                      className={
                         router.pathname == '/about' ? 'text-orange' : ''
                      }
-                  >
+                     >
                      Find Work
                   </a>
                </Link>
@@ -52,7 +56,9 @@ const Header = (props: Props) => {
                </button>
             </div>
          </div>
-      </header>
+      </div>
+         </WrapContent>
+      </Box>
    );
 };
 

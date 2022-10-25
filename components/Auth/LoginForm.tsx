@@ -26,9 +26,10 @@ import {
     };
   
     return (
-      <Stack alignItems={"center"} justifyContent={"center"} spacing="5" w="full">
+        
+      <Stack alignItems={"center"} justifyContent={"center"} spacing="5" maxWidth={"600px"}>
 
-        <Stack spacing="5" as="form" onSubmit={handleSubmit} w={["full", "80%"]}>
+        <Stack spacing="5" as="form" onSubmit={handleSubmit}>
 
             <Center flexDir="column">
             <Text className='text-primary font-bold'>
@@ -60,16 +61,19 @@ import {
               placeholder="enter password"
             />
           </FormControl>
-          <HStack pb="5" justifyContent={"flex-end"} textDecoration="underline">
-            <Link href="/forgot-password">Forgot password?</Link>
-          </HStack>
+            <Center justifyContent={"space-between"}>
+          <Text>Forgotten Password?</Text>
+            <Box color='tomato'>
+            <Link  href="/forgot-password" >Reset Password</Link>
+            </Box>
+            </Center>
   
           <Button type="submit" bg="#F24726">
             Login
           </Button>
-          <Center gap="100" flexDir="row">
-            <Text> Doesn’t have an account yet? </Text>
-            <Box as="span" textDecor={"underline"}>
+          <Center gap={5} justifyContent={"space-between"}>
+            <Text> Don’t have an account yet? </Text>
+            <Box color='tomato' as="span" >
               <Link href="/signup">Create account</Link>
             </Box>
 
@@ -84,12 +88,12 @@ import {
 
         
         
-        <Center className="space-y-4" flexDir="column" >
-          <Button  className='flex flex-row items-center bg-white border  px-2 py-1 space-x-1 text-sm rounded-md' leftIcon={<FaGoogle />} >
+        <Center className="space-y-4" flexDir="column" width={"full"} >
+          <Button width={"full"} leftIcon={<FaGoogle />} bgColor="white" border={"1px solid gray"}>
             Connect with Google
           </Button>
 
-          <Button className='flex flex-row items-center bg-blue border px-2 py-1 space-x-1 text-sm rounded-md' bg="#1877F2" leftIcon={<FaFacebook />} >
+          <Button width={"full"} className='flex flex-row items-center bg-blue border px-2 py-1 space-x-1 text-sm rounded-md' bg="#1877F2" leftIcon={<FaFacebook />} >
             Connect with facebook
           </Button>
         </Center>
