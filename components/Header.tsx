@@ -48,11 +48,15 @@ const Header = (props: Props) => {
             <div className='flex flex-row items-center space-x-2'>
                <button className='flex flex-row items-center bg-white border border-gray-400 px-2 py-1 space-x-1 text-sm rounded-md'>
                   <BsPerson />
+                  <Link href="/signup">
                   <span>Sign Up</span>
+                  </Link>
                </button>
                <button className='flex flex-row items-center bg-orange text-white px-2 py-1 space-x-1 text-sm rounded-md'>
                   <AiOutlineLogin />
+                  <Link href="/signin">
                   <span>Login</span>
+                  </Link>
                </button>
             </div>
          </div>

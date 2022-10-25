@@ -83,7 +83,7 @@ import {
           <Center gap={5} justifyContent={"space-between"}>
             <Text> Already have an account? </Text>
             <Box color='tomato' as="span" >
-              <Link href="/signup">Login</Link>
+              <Link href="/signin">Login</Link>
             </Box>
 
           </Center>
