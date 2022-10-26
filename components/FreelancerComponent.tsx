@@ -8,6 +8,10 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 type Props = {};
 
 const FreelancerComponent = ({ freelancer }) => {
+   //max rating
+   const MAX_RATING = 5;
+   const ratingDifference = MAX_RATING - freelancer?.rating;
+
    return (
       <div className='space-y-3 bg-gray-50 p-5 rounded-md'>
          <div className='flex justify-between '>
@@ -44,13 +48,40 @@ const FreelancerComponent = ({ freelancer }) => {
                <BsCheckCircle className='text-green-600' />
                <p>1 job completed</p>
             </div>
-            <div className='flex space-x-1'>
-               {[1, 2, 3, 4, 5].map((rate, index) => (
-                  <p key={index}>
-                     <AiOutlineStar className='text-[#FFC303] w-5 h-5' />
-                  </p>
-               ))}
-            </div>
+            {freelancer?.rating !== 0 ? (
+               <div className='flex space-x-1'>
+                  {Array(freelancer?.rating)
+                     // @ts-expect-error
+                     .fill()
+                     .map((_, i) => (
+                        <AiFillStar
+                           key={i}
+                           className='text-[#FFC303] w-5 h-5'
+                        />
+                     ))}
+                  {Array(MAX_RATING - freelancer?.rating)
+                     // @ts-expect-error
+                     .fill()
+                     .map((_, i) => (
+                        <AiOutlineStar
+                           key={i}
+                           className='text-[#FFC303] w-5 h-5'
+                        />
+                     ))}
+               </div>
+            ) : (
+               <div className='flex space-x-1'>
+                  {Array(MAX_RATING)
+                     // @ts-expect-error
+                     .fill()
+                     .map((_, i) => (
+                        <AiOutlineStar
+                           key={i}
+                           className='text-[#FFC303] w-5 h-5'
+                        />
+                     ))}
+               </div>
+            )}
          </div>
          <div className='flex space-x-2'>
             <button className='bg-white ring-1 ring-orange flex items-center space-x-2 justify-center py-1 rounded-sm w-full'>
