@@ -67,7 +67,7 @@ export const freelancers = [
    },
 ];
 
-export const PostedJobs = [
+export const postedJobs = [
    {
       id: 1,
       jobLogo:
