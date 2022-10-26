@@ -3,28 +3,37 @@ import React from 'react';
 import { freelancerTRype } from '../interfaces';
 import { BsCheckCircle } from 'react-icons/bs';
 import { BiMessageAltDetail } from 'react-icons/bi';
-import { MdOutlinePersonOutline } from 'react-icons/md';
+import { MdOutlinePersonOutline, MdOutlineVerified } from 'react-icons/md';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 type Props = {};
 
 const FreelancerComponent = ({ freelancer }) => {
    return (
       <div className='space-y-3 bg-gray-50 p-5 rounded-md'>
-         <div className='flex space-x-2 items-center'>
-            <div className='relative w-8 h-8 '>
-               <Image
-                  src={freelancer?.picture}
-                  alt=''
-                  layout='fill'
-                  className='rounded-full'
-               />
+         <div className='flex justify-between '>
+            <div className='flex space-x-2 items-center'>
+               <div className='relative w-8 h-8 '>
+                  <Image
+                     src={freelancer?.picture}
+                     alt=''
+                     layout='fill'
+                     className='rounded-full'
+                  />
+               </div>
+               <div>
+                  <p className='font-semibold tracking-wider capitalize text-lg'>
+                     {freelancer?.name}
+                  </p>
+                  <p className='text-gray-500 capitalize'>
+                     {freelancer?.title}
+                  </p>
+               </div>
             </div>
-            <div>
-               <p className='font-semibold tracking-wider capitalize text-lg'>
-                  {freelancer?.name}
-               </p>
-               <p className='text-gray-500 capitalize'>{freelancer?.title}</p>
-            </div>
+            {freelancer?.verified && (
+               <div className='mt-2'>
+                  <MdOutlineVerified className='w-4 h-4 text-[#0ca789]' />
+               </div>
+            )}
          </div>
 
          <p className='text-gray-500 text-sm truncate-line-clamp'>
