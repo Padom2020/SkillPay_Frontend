@@ -13,30 +13,30 @@ const HowItWorks = (props: Props) => {
             the readable content of a page when looking at its layout.
          </p>
          <div className='flex space-x-7 mt-4'>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center bg-white drop-shadow-md p-5'>
                <span className='bg-orange p-2 rounded-full'>
                   <MdOutlinePersonOutline className='text-white' />
                </span>
                <p className='font-bold'>Create Account</p>
-               <p className='text-xs text-gray-400'>
+               <p className='text-xs text-gray-400 w-1/2 text-center'>
                   First you have to create an account here
                </p>
             </div>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center bg-white drop-shadow-md p-4'>
                <span className='bg-primary p-2 rounded-full'>
                   <MdWorkOutline className='text-white' />
                </span>
                <p className='font-bold'>Search Work</p>
-               <p className='text-xs text-gray-400'>
+               <p className='text-xs text-gray-400 w-1/2 text-center'>
                   First you have to create an account here
                </p>
             </div>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center bg-white drop-shadow-md p-5'>
                <span className='bg-[#0CA789] p-2 rounded-full'>
                   <AiOutlineSave className='text-white' />
                </span>
                <p className='font-bold'>Save and apply</p>
-               <p className='text-xs text-gray-400'>
+               <p className='text-xs text-gray-400 w-1/2 text-center'>
                   First you have to create an account here
                </p>
             </div>

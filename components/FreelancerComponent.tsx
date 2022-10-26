@@ -12,7 +12,7 @@ const FreelancerComponent = ({ freelancer }) => {
    const MAX_RATING = 5;
 
    return (
-      <div className='space-y-3 bg-gray-50 p-5 rounded-md'>
+      <div className='space-y-2 bg-white drop-shadow-md p-5 rounded-sm'>
          <div className='flex justify-between '>
             <div className='flex space-x-2 items-center'>
                <div className='relative w-8 h-8 '>
@@ -24,10 +24,10 @@ const FreelancerComponent = ({ freelancer }) => {
                   />
                </div>
                <div>
-                  <p className='font-semibold tracking-wider capitalize text-lg'>
+                  <p className='font-semibold tracking-wider capitalize text-base'>
                      {freelancer?.name}
                   </p>
-                  <p className='text-gray-500 capitalize'>
+                  <p className='text-gray-500 capitalize text-sm'>
                      {freelancer?.title}
                   </p>
                </div>
@@ -45,7 +45,9 @@ const FreelancerComponent = ({ freelancer }) => {
          <div className='flex justify-between'>
             <div className='flex items-center space-x-2'>
                <BsCheckCircle className='text-green-600' />
-               <p>{freelancer?.jobCompleted} job completed</p>
+               <p className='text-xs capitalize'>
+                  <b>{freelancer?.jobCompleted}</b> job completed
+               </p>
             </div>
             {freelancer?.rating !== 0 ? (
                <div className='flex space-x-1'>
@@ -55,7 +57,7 @@ const FreelancerComponent = ({ freelancer }) => {
                      .map((_, i) => (
                         <AiFillStar
                            key={i}
-                           className='text-[#FFC303] w-5 h-5'
+                           className='text-[#FFC303] w-4 h-4'
                         />
                      ))}
                   {Array(MAX_RATING - freelancer?.rating)
@@ -64,7 +66,7 @@ const FreelancerComponent = ({ freelancer }) => {
                      .map((_, i) => (
                         <AiOutlineStar
                            key={i}
-                           className='text-[#FFC303] w-5 h-5'
+                           className='text-[#FFC303] w-4 h-4'
                         />
                      ))}
                </div>
@@ -82,12 +84,12 @@ const FreelancerComponent = ({ freelancer }) => {
                </div>
             )}
          </div>
-         <div className='flex space-x-2'>
-            <button className='bg-white ring-1 ring-orange flex items-center space-x-2 justify-center py-1 rounded-sm w-full'>
+         <div className='flex space-x-5'>
+            <button className='bg-white ring-1 ring-orange flex items-center space-x-1 justify-center  rounded-sm w-full text-xs py-1'>
                <BiMessageAltDetail className='text-orange' />
                <span className='text-orange'>Message</span>
             </button>
-            <button className=' bg-orange ring-1 ring-orange flex items-center justify-center space-x-2 px-2 py-1 rounded-sm w-full'>
+            <button className=' bg-orange ring-1 ring-orange flex items-center justify-center space-x-1  rounded-sm w-full text-xs py-1'>
                <MdOutlinePersonOutline className='text-white' />
                <span className='text-white'>View Profile</span>
             </button>
