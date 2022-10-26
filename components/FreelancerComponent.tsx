@@ -10,7 +10,6 @@ type Props = {};
 const FreelancerComponent = ({ freelancer }) => {
    //max rating
    const MAX_RATING = 5;
-   const ratingDifference = MAX_RATING - freelancer?.rating;
 
    return (
       <div className='space-y-3 bg-gray-50 p-5 rounded-md'>
