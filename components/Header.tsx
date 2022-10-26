@@ -48,7 +48,7 @@ const Header = (props: Props) => {
             <div className='flex flex-row items-center space-x-2'>
                <button className='flex flex-row items-center bg-white border border-gray-400 px-2 py-1 space-x-1 text-sm rounded-md'>
                   <BsPerson />
-                  <Link href="/signup">
+                  <Link href="/selectaccount">
                   <span>Sign Up</span>
                   </Link>
                </button>

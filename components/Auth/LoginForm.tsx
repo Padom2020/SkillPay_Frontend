@@ -89,7 +89,7 @@ import {
             Connect with Google
           </Button>
 
-          <Button width={"full"} className='flex flex-row items-center bg-blue border px-2 py-1 space-x-1 text-sm rounded-md' bg="#1877F2" leftIcon={<FaFacebook />} >
+          <Button width={"full"} className='flex flex-row items-center border px-2 py-1 space-x-1 text-sm rounded-md' bg="#1877F2" leftIcon={<FaFacebook />} >
             Connect with facebook
           </Button>
         </Center>
