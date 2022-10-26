@@ -43,9 +43,9 @@ const FreelancerComponent = ({ freelancer }) => {
             {freelancer?.Bio}
          </p>
          <div className='flex justify-between'>
-            <div className='flex items-center space-x-1'>
+            <div className='flex items-center space-x-2'>
                <BsCheckCircle className='text-green-600' />
-               <p>1 job completed</p>
+               <p>{freelancer?.jobCompleted} job completed</p>
             </div>
             {freelancer?.rating !== 0 ? (
                <div className='flex space-x-1'>
