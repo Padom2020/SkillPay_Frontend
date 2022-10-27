@@ -26,7 +26,7 @@ function SelectAccountType() {
           objectFit={"contain"}/>    
         </Box>
     <Stack spacing='3' textAlign={"center"}>
-     <Text _groupHover={{color:'#020648'}} className='pace-x-1 font-bold text-black'>
+     <Text _groupHover={{color:'#020648'}} className='pace-x-1 font-bold text-gray-500'>
      Sign up as an employer
      </Text>
      <Text className='space-x-1 text-sm rounded-md'>
@@ -45,7 +45,7 @@ function SelectAccountType() {
           objectFit={"contain"}/>    
         </Box>
     <Stack spacing='3' textAlign={"center"}>
-     <Text _groupHover={{color:'#020648'}} className='pace-x-1 text-black font-bold'>
+     <Text _groupHover={{color:'#020648'}} className='pace-x-1 text-gray-500 font-bold'>
      Sign up as an freelancer
      </Text>
      <Text className='space-x-1 text-sm rounded-md'>
