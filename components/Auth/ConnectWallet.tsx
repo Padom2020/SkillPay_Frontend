@@ -2,7 +2,7 @@ import { Box, Button, Center, Container, Image, Select, SimpleGrid, Stack, Text 
 import { MdArrowDropDown } from "react-icons/md";
 
 
-function SelectAccountType() {
+function ConnectWallet() {
     
     return(
 
@@ -41,4 +41,4 @@ function SelectAccountType() {
     )
 }
 
-export default SelectAccountType;
+export default ConnectWallet;

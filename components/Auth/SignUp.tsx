@@ -13,7 +13,7 @@ import {
   import React, { useState } from "react";
   import { FaFacebook, FaGoogle } from "react-icons/fa";
   
-  function LoginForm() {
+  function SignUp() {
     const [data, setData] = useState({ username: "", password: "" });
   
     const handleSubmit = (e) => {
@@ -110,5 +110,5 @@ import {
     );
   }
   
-  export default LoginForm;
+  export default SignUp;
   

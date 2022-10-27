@@ -3,7 +3,7 @@ import AuthLayout from "../components/Auth/AuthLayout";
 import ConnectWallet from "../components/Auth/ConnectWallet";
 
 
-function login() {
+function connectwallet() {
   return (
     <AuthLayout>
         <ConnectWallet/>
@@ -11,4 +11,4 @@ function login() {
   );
 }
 
-export default login;
+export default connectwallet;

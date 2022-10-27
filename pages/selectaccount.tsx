@@ -3,7 +3,7 @@ import AuthLayout from "../components/Auth/AuthLayout";
 import SelectAccountType from "../components/Auth/SelectAccountType";
 
 
-function login() {
+function selectaccount() {
   return (
     <AuthLayout>
       <SelectAccountType />
@@ -11,4 +11,4 @@ function login() {
   );
 }
 
-export default login;
+export default selectaccount;

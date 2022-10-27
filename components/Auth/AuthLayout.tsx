@@ -8,7 +8,7 @@ type Props = {
    title?: string;
 };
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const AuthLayout = ({ children, title = 'This is the default title' }: Props) => (
    <div>
     <Header />
     <WrapContent >
@@ -19,4 +19,4 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
    </div>
 );
 
-export default Layout;
+export default AuthLayout;

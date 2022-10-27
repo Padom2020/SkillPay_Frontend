@@ -3,7 +3,7 @@ import LoginForm from "../components/Auth/LoginForm";
 import AuthLayout from "../components/Auth/AuthLayout";
 
 
-function login() {
+function signin() {
   return (
     <AuthLayout>
       <LoginForm />
@@ -11,4 +11,4 @@ function login() {
   );
 }
 
-export default login;
+export default signin;
