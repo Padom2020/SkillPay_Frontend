@@ -75,34 +75,8 @@ export const postedJobs = [
       jobTitle: 'Job title 1',
       description:
          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
+      jobType: 'Contract',
+      jobLevel: 'Senior level',
       jobDuration: 'temporary',
    },
    {
@@ -112,34 +86,8 @@ export const postedJobs = [
       jobTitle: 'Job title 2',
       description:
          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
+      jobType: 'Contract',
+      jobLevel: 'Senior level',
       jobDuration: 'temporary',
    },
    {
@@ -149,34 +97,8 @@ export const postedJobs = [
       jobTitle: 'Job title 3',
       description:
          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
+      jobType: 'Contract',
+      jobLevel: 'Senior level',
       jobDuration: 'temporary',
    },
    {
@@ -186,34 +108,8 @@ export const postedJobs = [
       jobTitle: 'Job Title 4',
       description:
          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
+      jobType: 'Contract',
+      jobLevel: 'Senior level',
       jobDuration: 'temporary',
    },
    {
@@ -223,71 +119,8 @@ export const postedJobs = [
       jobTitle: 'Job Title 5',
       description:
          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
-      jobDuration: 'temporary',
-   },
-   {
-      id: 6,
-      jobLogo:
-         'https://images.unsplash.com/photo-1602934445884-da0fa1c9d3b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGxvZ298ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-      jobTitle: 'Job Title 6',
-      description:
-         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
+      jobType: 'Contract',
+      jobLevel: 'Senior level',
       jobDuration: 'temporary',
    },
    {
@@ -297,34 +130,8 @@ export const postedJobs = [
       jobTitle: 'Job tTitle 7',
       description:
          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
+      jobType: 'Contract',
+      jobLevel: 'Senior level',
       jobDuration: 'temporary',
    },
    {
@@ -334,34 +141,8 @@ export const postedJobs = [
       jobTitle: 'Job Title 8',
       description:
          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
+      jobType: 'Contract',
+      jobLevel: 'Senior level',
       jobDuration: 'temporary',
    },
    {
@@ -371,34 +152,59 @@ export const postedJobs = [
       jobTitle: 'Job title 9',
       description:
          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      jobType: [
-         {
-            id: 1,
-            type: 'contract',
-         },
-         {
-            id: 1,
-            type: 'Part-time',
-         },
-         {
-            id: 1,
-            type: 'Full-time',
-         },
-      ],
-      jobLevel: [
-         {
-            id: 1,
-            type: 'senior-level',
-         },
-         {
-            id: 1,
-            type: 'intermediate-level',
-         },
-         {
-            id: 1,
-            type: 'junior-level',
-         },
-      ],
+      jobType: 'Contract',
+      jobLevel: 'Senior level',
       jobDuration: 'temporary',
+   },
+];
+
+export const categoryies = [
+   {
+      id: 1,
+      catImage:
+         'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      catTitle: 'Category 1',
+   },
+   {
+      id: 2,
+      catImage:
+         'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      catTitle: 'Category 2',
+   },
+   {
+      id: 3,
+      catImage:
+         'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      catTitle: 'Category 3',
+   },
+   {
+      id: 4,
+      catImage:
+         'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      catTitle: 'Category 4',
+   },
+   {
+      id: 5,
+      catImage:
+         'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      catTitle: 'Category 5',
+   },
+   {
+      id: 6,
+      catImage:
+         'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      catTitle: 'Category 6',
+   },
+   {
+      id: 7,
+      catImage:
+         'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      catTitle: 'Category 7',
+   },
+   {
+      id: 8,
+      catImage:
+         'https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      catTitle: 'Category 8',
    },
 ];
