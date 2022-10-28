@@ -24,8 +24,8 @@ const MobileNavbar = ({ openMenu, setOpenMenu }) => {
          <div
             className={
                openMenu
-                  ? 'fixed top-0 left-0 h-screen bg-gradient-to-r from-primary to-primary/90 shadow-xl shadow-blue-500 w-[70%]  md:w-[50%] ease-in duration-900 z-80 pt-3 px-3'
-                  : 'fixed -left-[100%] top-0 ease-in duration-700 bg-gradient-to-r from-blue-300 via-blue-200 to-blue-50 shadow-xl shadow-blue-500 w-[75%] md:w-[55%] h-screen z-80 pt-3 px-3'
+                  ? 'fixed top-0 left-0 h-screen bg-gradient-to-r from-primary to-primary/90 shadow-xl shadow-orange w-[70%]  md:w-[50%] ease-in duration-900 z-80 pt-3 px-3'
+                  : 'fixed -left-[100%] top-0 ease-in duration-700 bg-gradient-to-r from-primary to-primary/90 shadow-xl shadow-orange w-[75%] md:w-[55%] h-screen z-80 pt-3 px-3'
             }
             onClick={(e) => e.stopPropagation()}
          >
