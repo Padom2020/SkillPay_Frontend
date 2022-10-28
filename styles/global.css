@@ -5,6 +5,12 @@
    overflow: hidden;
 }
 
+.ql-editor{
+   min-height:100px;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
