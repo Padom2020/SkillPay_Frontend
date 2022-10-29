@@ -8,10 +8,8 @@ function MyApp({ Component, pageProps }) {
    return (
       <ChakraProvider>
          <CSSReset />
-         <Header />
          <Component {...pageProps} />
          <section className='bg-white pb-12'>
-            <Footer />
          </section>
       </ChakraProvider>
    );

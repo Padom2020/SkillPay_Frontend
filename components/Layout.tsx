@@ -18,8 +18,9 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
             content='initial-scale=1.0, width=device-width'
          />
       </Head>
-      {/* <Header /> */}
+      <Header />
       {children}
+      <Footer/>
    </div>
 );
 

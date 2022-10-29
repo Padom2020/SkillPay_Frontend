@@ -5,6 +5,7 @@ import PostedJobs from '../components/PostedJobs';
 import Category from '../components/Category';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const Home = () => {
    return (
@@ -23,6 +24,7 @@ const Home = () => {
          <section className='bg-[#F2F3F6]/50 pb-8 lg:pb-12'>
             <Newsletter />
          </section>
+         <Footer />
       </div>
    );
 };
