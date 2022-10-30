@@ -5,6 +5,11 @@ import { VscArrowSmallLeft, VscArrowSmallRight, VscVerified } from "react-icons/
 import { BiMessageAltDetail } from 'react-icons/bi';
 import { FcGoogle } from "react-icons/fc";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import FreelancerJobCompleted from "../../components/FreelancerJobCompleted";
+import FreelancerReview from "../../components/FreelancerReview";
+import { SlLocationPin } from "react-icons/sl";
+import { HiOutlinePhoneMissedCall } from "react-icons/hi";
+import { CiMail } from "react-icons/ci"
 
 
 const Profile = () => {
@@ -89,8 +94,8 @@ const Profile = () => {
           </div>
         </div>
         <div className="mt-5">
-          <div className="flex">
-            <div>
+          <div className="flex space-x-8">
+            <div className="w-[69%]">
               <div className="flex justify-between items-center">
                 <h2 className="text-[22px] font-[500] text-[#080812]">About Me</h2>
                 <div className="flex space-x-3 items-center">
@@ -164,7 +169,40 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div></div>
+            <div>
+              <div>
+                <h4 className="text-[#080812] font-[500] text-[22px]">Skills</h4>
+                <div className="my-6">
+                  <div className="flex space-x-4 mb-5">
+                    <span className="bg-[#F8F9FB] rounded-[5px] py-1 px-2 text-[rgba(8, 8, 18, 0.7)] font-[400]">UI/UX Design</span>
+                    <span className="bg-[#F8F9FB] rounded-[5px] py-1 px-2 text-[rgba(8, 8, 18, 0.7)] font-[400]">Website Development</span>
+                  </div>
+                  <div className="flex space-x-4">
+                    <span className="bg-[#F8F9FB] rounded-[5px] py-1 px-2 text-[rgba(8, 8, 18, 0.7)] font-[400]">User Experience Design</span>
+                    <span className="bg-[#F8F9FB] rounded-[5px] py-1 px-2 text-[rgba(8, 8, 18, 0.7)] font-[400]">Figma</span>
+                  </div>
+                  <div className="my-4">
+                    <span className="bg-[#F8F9FB] rounded-[5px] py-1 px-2 text-[rgba(8, 8, 18, 0.7)] font-[400]">Interface Design</span>
+                  </div>
+                </div>
+                <h5 className="text-[#080812] font-[500] text-[22px]">$35,000-40,000 </h5>
+                <p className="text-[#080812] font-[500] text-[15px]">Avg. salary</p>
+                <div className="mt-6">
+                  <div className="flex items-center space-x-4">
+                    <span><SlLocationPin /></span>
+                    <span className="text-[rgba(2, 6, 72, 0.7)] font-[400]">Port Harcourt</span>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <span><HiOutlinePhoneMissedCall /></span>
+                    <span className="text-[rgba(2, 6, 72, 0.7)] font-[400]">+25470000000</span>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <span><CiMail /></span>
+                    <span className="text-[rgba(2, 6, 72, 0.7)] font-[400]">bluelance@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -183,14 +221,7 @@ const Profile = () => {
           </div>
           <div className="flex items-center space-x-5 pb-12 mt-3">
             {
-              jobs?.map((job, index) => (
-                <div className="w-[400px] rounded-[5px] shadow-lg px-3 pt-3 bg-white" key={++index}>
-                  <div>
-                    <img src={job.image} alt="" className="rounded-[5px]" />
-                  </div>
-                  <p className="text-[#080812] font-[400] text-[18px] mt-3 mb-4">{job.desc}</p>
-               </div>
-              ))
+              jobs?.map((job, index) => (<FreelancerJobCompleted job={job} key={++index} />))
             }
           </div>
         </div>
@@ -210,110 +241,7 @@ const Profile = () => {
           </div>
           <div className="flex items-center space-x-5 pb-12 mt-3">
             {
-              reviews?.map((review, index) => (
-                <div className="w-[400px] rounded-[5px] px-3 pt-3 bg-[#FAFBFC]" key={++index}>
-                  <div className="text-[rgba(8, 8, 18, 0.7)] text-[14px] font-[400]">{review.comment}</div>
-                  <div className="flex items-center space-x-2 mb-3 mt-8">
-                    <div>
-                      <img src={review.avatar} alt="" className="" />
-                    </div>
-                    <div>
-                      <div className="flex justify-between items-center">
-                        <p className="text-[#080812] font-[500] text-[14px]">{review.name}</p>
-                        {
-                          review.rating === 0 && <div className="flex items-start">
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                         </div>
-                        }
-                        {
-                          review.rating === 1 && <div className="flex items-start">
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                         </div>
-                        }
-                        {
-                          review.rating === 2 && <div className="flex items-start">
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                         </div>
-                        }
-                        {
-                          review.rating === 3 && <div className="flex items-start">
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                         </div>
-                        }
-                        {
-                          review.rating === 4 && <div className="flex items-start">
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                         </div>
-                        }
-                        {
-                          review.rating === 5 && <div className="flex items-start">
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                         </div>
-                        }
-                        {
-                          review.rating === 6 && <div className="flex items-start">
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiOutlineStar /></span>
-                         </div>
-                        }
-                        {
-                          review.rating === 7 && <div className="flex items-start">
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                            <span className="text-[#FFC303]"><AiFillStar /></span>
-                         </div>
-                        }
-                      </div>
-                      <div className="text-[rgba(8, 8, 18, 0.7)] font-[400]">{review.role} {review.workPlace}</div>
-                    </div>
-                  </div>
-               </div>
-              ))
+              reviews?.map((review, index) => (<FreelancerReview review={review} key={++index} />))
             }
           </div>
         </div>
