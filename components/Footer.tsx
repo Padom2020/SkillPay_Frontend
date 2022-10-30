@@ -8,7 +8,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
    return (
-      <div className='px-4 lg:px-0 w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[65%] mx-auto'>
+      <div className='px-4 lg:px-0 w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[75%] mx-auto'>
          {/* footer for main view */}
          <div className='pt-7 hidden lg:flex justify-between space-x-10'>
             <div className='w-full'>
