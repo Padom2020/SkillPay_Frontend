@@ -21,7 +21,7 @@ const Header = (props: Props) => {
       <div>
          <Box as='header'>
             <WrapContent>
-               <div className='mx-auto flex flex-row items-start xl:items-center sticky top-0 py-3'>
+               <div className='mx-auto flex flex-row items-start xl:items-center sticky top-0 py-3 border-b border-[#f3f4f6]'>
                   <Link href='/'>
                      <h2 className='flex-1 text-sm cursor-pointer'>
                         <span className='text-primary font-semibold'>
