@@ -289,7 +289,7 @@ const JobDetails = (props: Props) => {
                               className='border px-2 py-1 text-xs outline-none'
                            />
                         </div>
-                        <div>
+                        <div className='space-y-1'>
                            <label
                               htmlFor='check'
                               className='flex text-xs space-x-2 items-center'
