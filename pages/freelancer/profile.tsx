@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Layout from "../../components/Layout";
 import { VscArrowSmallLeft, VscArrowSmallRight, VscVerified } from "react-icons/vsc";
@@ -10,9 +10,11 @@ import FreelancerReview from "../../components/FreelancerReview";
 import { SlLocationPin } from "react-icons/sl";
 import { HiOutlinePhoneMissedCall } from "react-icons/hi";
 import { CiMail } from "react-icons/ci"
+import MessageModal from "../../components/MessageModal";
 
 
 const Profile = () => {
+  const [showMsgModal, setMsgModal] = useState(false);
   const [jobs, setJobs] = useState([
     {
       image: "/images/e-commerce.svg", 
@@ -65,6 +67,10 @@ const Profile = () => {
       rating: 2,
     },
   ]);
+  const handleMsgClick = (evt: React.MouseEvent) => {
+    evt.stopPropagation();
+    setMsgModal(true);
+  }
   return (
     <Layout title="SkillPay | Freelancer Profile View">
       <div>
@@ -83,7 +89,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="flex items-center space-x-3">
-            <div className="border-2 border-orange py-1 px-3 rounded-lg flex items-center space-x-3 text-orange hover:cursor-pointer hover:shadow-md">
+            <div className="border-2 border-orange py-1 px-3 rounded-lg flex items-center space-x-3 text-orange hover:cursor-pointer hover:shadow-md" onClick={handleMsgClick}>
               <span><BiMessageAltDetail /></span>
               <span>Message</span>
             </div>
@@ -247,6 +253,9 @@ const Profile = () => {
         </div>
       </div>
       <hr />
+      {
+        showMsgModal && <MessageModal closeModal={setMsgModal} />
+      }
     </Layout>
   )
 };
