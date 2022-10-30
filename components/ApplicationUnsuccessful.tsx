@@ -1,13 +1,14 @@
 import { CheckCircleIcon, CloseIcon } from '@chakra-ui/icons'
 import { Box, Button, Center, HStack, SimpleGrid, Stack, Text } from '@chakra-ui/react'
 import Link from 'next/link'
+import { BiXCircle } from 'react-icons/bi'
 
 function ApplicationUnSuccessful (){
   return (
     <Stack alignItems={"center"} justifyContent={"center"} spacing="3" >
     <SimpleGrid spacing="10">
     <Center flexDir="column" gap="2">
-    <CloseIcon w={10} h={10} color="red" />
+    <BiXCircle color="red" size={50} />
         <Text className='text-primary font-bold'>  
         You have exhausted your points
         </Text>
