@@ -1,26 +1,27 @@
-import { CheckCircleIcon } from '@chakra-ui/icons'
+import { CheckCircleIcon, CloseIcon } from '@chakra-ui/icons'
 import { Box, Button, Center, HStack, SimpleGrid, Stack, Text } from '@chakra-ui/react'
 import Link from 'next/link'
+import { BiXCircle } from 'react-icons/bi'
 
-function ApplicationSuccessful (){
+function ApplicationUnSuccessful (){
   return (
     <Stack alignItems={"center"} justifyContent={"center"} spacing="3" >
     <SimpleGrid spacing="10">
     <Center flexDir="column" gap="2">
-    <CheckCircleIcon w={10} h={10} color="green" />
+    <BiXCircle color="red" size={50} />
         <Text className='text-primary font-bold'>  
-        Application Submitted
+        You have exhausted your points
         </Text>
         <Text className='space-x-1 text-sm rounded-md'>
-        Your application has been successfully
+        Proceed to purchase points to cotinue 
         </Text>
         <Text className='space-x-1 text-sm rounded-md'>
-             submitted 
+        with your applications
         </Text>
     </Center>
     <HStack justifyContent={"center"} >
         <Button  type="submit" bg="#F24726" alignSelf={"center"} w="200px" colorScheme={"orange"}>
-        View More Jobs
+        Proceed
         </Button>
         </HStack>
     </SimpleGrid>
@@ -28,4 +29,4 @@ function ApplicationSuccessful (){
   )
 }
 
-export default ApplicationSuccessful
+export default ApplicationUnSuccessful
