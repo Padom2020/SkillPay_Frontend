@@ -41,10 +41,10 @@ const Header = (props: Props) => {
                               Home
                            </a>
                         </Link>
-                        <Link href='/about'>
+                        <Link href='/jobs'>
                            <a
                               className={
-                                 router.pathname == '/about'
+                                 router.pathname == '/jobs'
                                     ? 'text-orange'
                                     : ''
                               }
@@ -52,19 +52,19 @@ const Header = (props: Props) => {
                               Find Work
                            </a>
                         </Link>
-                        <Link href='/about'>
+                        <Link href='/freelancers'>
                            <a
                               className={
-                                 router.pathname == '#' ? 'text-orange' : ''
+                                 router.pathname == '/freelancers' ? 'text-orange' : ''
                               }
                            >
                               Find Freelancers
                            </a>
                         </Link>
-                        <Link href='/about'>
+                        <Link href='/'>
                            <a
                               className={
-                                 router.pathname == '#' ? 'text-orange' : ''
+                                 router.pathname == '/' ? 'text-orange' : ''
                               }
                            >
                               Courses
