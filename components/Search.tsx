@@ -4,7 +4,7 @@ interface Props {
   handleSearch?: (search: string) => Promise<void>,
   placeholder?: string,
 }
-const Search = ({handleSearch, placeholder}: Props) => {
+const Search = ({handleSearch, placeholder="Search for freelancers"}: Props) => {
   const [searchInput, setInput] = useState("");
   const handleClick = async () => {
     await handleSearch(searchInput)
@@ -14,7 +14,7 @@ const Search = ({handleSearch, placeholder}: Props) => {
       <input
         type='text'
         value={searchInput}
-        placeholder={placeholder??'Search for freelancers'}
+        placeholder={placeholder}
         className='pl-3 pr-9 py-1 md:py-2 w-full placeholder:text-gray-200 placeholder:text-xs outline-none bg-white text-gray-800 text-xs md:text-sm lg:text-base border rounded-[5px]'
         onChange={(evt) => setInput(evt.target.value)}
       />
