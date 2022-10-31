@@ -42,12 +42,12 @@ const Jobs = () => {
       <div>
         <hr />
         <div className='md:max-w-[90%] lg:max-w-[90%] xl:max-w-[65%] mx-auto mt-4'>
-          <h1 className="text-[#080812] text-[30px] font-[500]">Search For Available Jobs</h1>
+          <h1 className="text-[#080812] text-[25px] font-[500]">Search For Available Jobs</h1>
           <div className="w-[60%]">
             <Search />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 my-4">
-            <div className="">
+          <div className="flex md:space-x-6 space-y-6 md:space-y-0 my-4">
+            <div className="w-[90%] md:w-[50%] lg:w-[20%] mx-auto md:mx-0">
               <Select value={selectForm.type} placeHolder="Job Type" icon={<MdWorkOutline />} onChange={onChange("type")}>
                 <option value="Web Design" className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Web Design</option>
                 <option value={"Front End"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Front End Development</option>
@@ -55,19 +55,29 @@ const Jobs = () => {
                 <option value={"Web3"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Web3</option>
               </Select>
             </div>
-            <div className="">
-              <Select value={selectForm.level} placeHolder="Career Level" icon={<BsBarChart />} onChange={onChange("level")} >
+            <div className="lg:w-[20%]">
+              <Select value={selectForm.level} placeHolder="Career Level" icon={<BsBarChart />} onChange={onChange("level")}>
                 <option value={"Beginner"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Beginer Level</option>
                 <option value={"Junior"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Junior Level</option>
                 <option value={"Intermediate"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Intermediate Level</option>
                 <option value={"Senior"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Senior Level</option>
               </Select>
             </div>
-            <div className="">
-              <Select placeHolder="Schedule" icon={<MdAccessTime />}></Select>
+            <div className="lg:w-[20%]">
+              <Select value={selectForm.time} placeHolder="Schedule" icon={<MdAccessTime />} onChange={onChange("time")}>
+                <option value={"Beginner"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Beginer Level</option>
+                <option value={"Junior"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Junior Level</option>
+                <option value={"Intermediate"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Intermediate Level</option>
+                <option value={"Senior"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Senior Level</option>
+              </Select>
             </div>
-            <div className="">
-              <Select placeHolder="Category" icon={<BiCategory />}></Select>
+            <div className="lg:w-[20%]">
+              <Select value={selectForm.categ} placeHolder="Category" icon={<BiCategory />} onChange={onChange("categ")}>
+                <option value={"Beginner"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Beginer Level</option>
+                <option value={"Junior"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Junior Level</option>
+                <option value={"Intermediate"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Intermediate Level</option>
+                <option value={"Senior"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Senior Level</option>
+              </Select>
             </div>
           </div>
           {/* <div className="flex items-center mt-4">
@@ -75,11 +85,11 @@ const Jobs = () => {
               <Select placeHolder="Job Type" icon={<MdWorkOutline />}></Select>
             </div>
           </div> */}
-          <div className='flex items-center justify-between my-1'>
+          <div className='flex justify-center md:items-center md:justify-between my-1'>
             <p className='capitalize font-[400] text-[25px] md:text-base text-[rgba(8, 8, 18, 0.7)]'>
               215 UI/UX Results found
             </p>
-            <div className='flex items-center justify-center capitalize border rounded-[5px] font-[400]'>
+            <div className='hidden md:flex items-center justify-center capitalize border rounded-[5px] font-[400]'>
               <div className="py-1 px-2">Latest</div>
               <div className="py-1 px-2 bg-[#020648] text-white">Popular</div>
             </div>
