@@ -208,3 +208,79 @@ export const categoryies = [
       catTitle: 'Category 8',
    },
 ];
+
+
+export const searchProducts = [
+   {
+      id: 1,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         '/images/productsample.png',
+      rating: 5
+   },
+   {
+      id: 2,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         'https://images.unsplash.com/photo-1667328138936-fdfa3c9cd07d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80s',
+      rating: 5
+   },
+   {
+      id: 3,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         '/images/productsample.png',
+      rating: 5
+   },
+   {
+      id: 4,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         '/images/productsample.png',
+      rating: 5
+   },
+   {
+      id: 5,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         '/images/productsample.png',
+      rating: 5
+   },
+   {
+      id: 6,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         '/images/productsample.png',
+      rating: 5
+   },
+   {
+      id: 7,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         '/images/productsample.png',
+      rating: 5
+   },
+   {
+      id: 8,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         '/images/productsample.png',
+      rating: 5
+   },
+];

@@ -2,21 +2,19 @@ import { Stack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { BsBarChart } from "react-icons/bs";
-import { MdAccessTime, MdWorkOutline } from "react-icons/md";
-import { SlLocationPin } from "react-icons/sl";
+import { MdWorkOutline } from "react-icons/md";
 import Freelancer from "../components/Freelancer";
 import Pagination from "../components/Pagination";
 import Search from "../components/Search";
 import Select from "../components/Select";
-import { freelancers } from "../mockData";
+import { searchProducts } from "../mockData";
+import ProductItem from "./ProductItem";
 
 const Index = () => {
   const router = useRouter();
   const [selectForm, setSelectForm] = useState({
-    skill: "",
-    location: "",
-    level: "",
-    schedule: ""
+    skills: "",
+    category: ""
   });
   const onChange = (input: string) => (evt: React.MouseEvent) => {
     const target = evt.target as Element;
@@ -49,20 +47,23 @@ const Index = () => {
         </div>
         <div className="flex md:space-x-6 space-y-6 md:space-y-0 my-4">
           <div className="w-[90%] md:w-[50%] lg:w-[20%] mx-auto md:mx-0">
-            <Select value={selectForm.skill} placeHolder="Skills" icon={<MdWorkOutline />} onChange={onChange("skill")}>
+            <Select value={selectForm.skills} placeHolder="Skills" icon={<MdWorkOutline />} onChange={onChange("skill")}>
               <option value="Web Design" className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Web Design</option>
-              <option value={"Front End"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Front End Development</option>
-              <option value={"Block Chain"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Block Chain</option>
+              <option value={"Front End"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>FrontEnd Development</option>
+              <option value={"Block Chain"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>BlockChain</option>
+              <option value={"Mobile App"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Mobile App</option>
               <option value={"Web3"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Web3</option>
             </Select>
           </div>
 
           <div className="lg:w-[20%]">
-            <Select value={selectForm.level} placeHolder="Category" icon={<BsBarChart />} onChange={onChange("level")}>
-              <option value={"Beginner"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Beginer Level</option>
-              <option value={"Junior"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Junior Level</option>
-              <option value={"Intermediate"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Intermediate Level</option>
-              <option value={"Senior"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Senior Level</option>
+            <Select value={selectForm.category} placeHolder="Category" icon={<BsBarChart />} onChange={onChange("level")}>
+              <option value={"UIUX"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>UIUX</option>
+              <option value={"Templates"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Templates</option>
+              <option value={"Mobile Apps"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Mobile Apps</option>
+              <option value={"SmartContracts"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>SmartContracts</option>
+              <option value={"Web Apps"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Web Apps</option>
+              <option value={"Dapps"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Dapps</option>
             </Select>
           </div>
         </div>
@@ -74,9 +75,9 @@ const Index = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-3 mt-10">
-            {
-              freelancers?.map((freelancer) => (<Freelancer freelancer={freelancer} handleViewProfile={handleViewProfile} />))
-            }
+            {searchProducts?.map((prod)=>{
+              return <ProductItem product={prod} key={prod.id}/>
+            })}
           </div>
         </div>
         <div className="flex justify-end py-14">
