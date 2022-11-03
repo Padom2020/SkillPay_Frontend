@@ -283,4 +283,13 @@ export const searchProducts = [
          '/images/productsample.png',
       rating: 5
    },
+   {
+      id: 8,
+      name: "3D Designs Animation",
+      price: 3500,
+      currency: "USD",
+      image:
+         '/images/productsample.png',
+      rating: 5
+   }
 ];
