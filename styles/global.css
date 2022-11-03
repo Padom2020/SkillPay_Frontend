@@ -9,6 +9,11 @@
    min-height:100px;
 }
 
+.progress {
+   width: 0%;
+   background-color: #F24726
+}
+
 
 
 @tailwind base;

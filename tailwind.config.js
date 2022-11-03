@@ -12,6 +12,8 @@ module.exports = {
             gray: 'rgba(242, 243, 246, 0.5)',
             'gray-pagination': 'rgba(2, 6, 72, 0.4)',
             "over-lay": "rgba(2, 6, 72, 0.1)",
+            gray2: "rgba(8, 8, 18, 0.4)",
+            gray3: "rgba(2, 6, 72, 0.1)",
 
          },
          zIndex: {
