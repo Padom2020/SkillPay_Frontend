@@ -4,6 +4,7 @@ import { FaFileUpload } from "react-icons/fa";
 import { BsBriefcase } from "react-icons/bs";
 import classNames from "classnames";
 import { useDropzone } from "react-dropzone";
+import Head from "next/head";
 
 const JobMilestones = () => {
   const [uploadData, setUpload] = useState({
@@ -46,6 +47,9 @@ const JobMilestones = () => {
 
   return (
     <div>
+      <Head>
+        <title>SkillPay | Job Milesstones</title>
+      </Head>
       <div className="bg-white">
         <div className="flex justify-end">
           <span className="text-xl hover:cursor-pointer pt-2 pr-6">&times;</span>
@@ -127,7 +131,7 @@ const JobMilestones = () => {
               <div className="w-[100%]">
                 <p className="text-[#19191C] font-[400] text-center md:text-left">{uploadData.name}</p>
                 <p className="font-[400] text-[rgba(8, 8, 18, 0.4)] text-center md:text-left">{uploadData.size}kb</p>
-                <div className="flex flex-col md:flex-row space-y-4 md:space-y-5 items-center md:space-x-5">
+                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 items-center md:space-x-5">
                   <div className="bar border bg-slate-50 w-full rounded-2xl ">
                     <div className="progress h-[6px] rounded-2xl" ref={barRef}></div>
                   </div>
@@ -140,8 +144,8 @@ const JobMilestones = () => {
             <label htmlFor="desc">Describe prototype in detail</label>
             <textarea name="" id="desc" rows={6} className="border rounded-md caret-orange outline-none focus:border-orange p-3 resize-none" />
           </div>
-          <div className="flex justify-end">
-            <div><button className="text-white bg-orange py-1 px-10 rounded-md">Save</button></div>
+          <div className="flex justify-center md:justify-end">
+            <div><button className="text-white bg-orange py-1 px-20 md:px-10 rounded-md">Save</button></div>
           </div>
         </div>
       </div>
