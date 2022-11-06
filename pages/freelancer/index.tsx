@@ -87,9 +87,12 @@ const Index = () => {
             </div>
           </div>
           <div className="flex items-center">
-            <div className="text-white text-xs md:text-base bg-orange py-1 px-3 rounded-lg flex items-center space-x-3 hover:cursor-pointer hover:shadow-md">
+            <div className="text-white text-xs md:text-base bg-orange py-1 px-3 rounded-lg flex items-center space-x-1 sm:space-x-3 hover:cursor-pointer hover:shadow-md">
               <span><TiEdit /></span>
-              <span>Edit Profile</span>
+              <div className="flex space-x-2">
+                <span>Edit</span>
+                <span className="hidden sm:block">Profile</span>
+              </div>
             </div>
           </div>
         </div>

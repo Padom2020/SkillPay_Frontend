@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Link from "next/link";
 import { BiMessageSquareDetail, BiUser } from "react-icons/bi";
 import { MdNotificationsNone, MdOutlineSpaceDashboard, MdClose } from "react-icons/md";
@@ -13,6 +13,10 @@ type Props = {
 }
 const MobileSideNavFreelancer = ({showMenu, setShowMenu}: Props) => {
   const router = useRouter();
+
+  useEffect(() => {
+    if (router.isReady) setShowMenu(false)
+  }, [router.isReady])
 
   return (
     <div className={classNames({
@@ -35,61 +39,61 @@ const MobileSideNavFreelancer = ({showMenu, setShowMenu}: Props) => {
             <div className={classNames("flex items-center space-x-2 hover:cursor-pointer text-white", {
               "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer"
             })}>
-              <Link href={""}>
-                <>
-                <span className=" p-[2px]"><MdOutlineSpaceDashboard /></span>
-                <span className="">Dashboard</span>
-                </>
+              <Link href={"/freelancer"}>
+                <a className="flex items-center space-x-2">
+                  <span className=" p-[2px]"><MdOutlineSpaceDashboard /></span>
+                  <span className="">Dashboard</span>
+                </a>
               </Link>
             </div>
-            <div className={classNames("flex items-center space-x-2 hover:cursor-pointer text-white", {
+            <div className={classNames("hover:cursor-pointer text-white", {
               "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/messages"
             })}>
-              <Link href={""}>
-                <>
-                <span className="p-[2px]"><BiMessageSquareDetail /></span>
-                <span className="">Messages</span>
-                </>
+              <Link href="/freelancer/messages">
+                <a className="flex items-center space-x-2 ">
+                  <span className="p-[2px]"><BiMessageSquareDetail /></span>
+                  <span className="">Messages</span>
+                </a>
               </Link>
             </div>
-            <div className={classNames("flex items-center space-x-2 hover:cursor-pointer text-white", {
+            <div className={classNames("hover:cursor-pointer text-white", {
               "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/notifications"
             })}>
-              <Link href={""}>
-                <>
-                <span className="p-[2px] text-white"><MdNotificationsNone /></span>
-                <span>Notifications</span>
-                </>
+              <Link href={"/freelancer/notifications"}>
+                <a className="flex items-center space-x-2">
+                  <span className="p-[2px] text-white"><MdNotificationsNone /></span>
+                  <span>Notifications</span>
+                </a>
               </Link>
             </div>
-            <div className={classNames("flex items-center space-x-2 hover:cursor-pointer text-white", {
+            <div className={classNames("hover:cursor-pointer text-white", {
               "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/profile"
             })}>
-              <Link href={""}>
-                <>
-                <span className="p-[2px]"><BiUser /></span>
-                <span>Profile</span>
-                </>
+              <Link href={"/freelancer/profile"}>
+                <a className="flex items-center space-x-2">
+                  <span className="p-[2px]"><BiUser /></span>
+                  <span>Profile</span>
+                </a>
               </Link>
             </div>
-            <div className={classNames("flex items-center space-x-2 hover:cursor-pointer text-white", {
+            <div className={classNames("hover:cursor-pointer text-white", {
               "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/earnings"
             })}>
-              <Link href={""}>
-                <>
-                <span className="p-[2px]"><AiOutlineCreditCard /></span>
-                <span>Earnings</span>
-                </>
+              <Link href={"/freelancer/earnings"}>
+                <a className="flex items-center space-x-2">
+                  <span className="p-[2px]"><AiOutlineCreditCard /></span>
+                  <span>Earnings</span>
+                </a>
               </Link>
             </div>
-            <div className={classNames("flex items-center space-x-2 hover:cursor-pointer text-white", {
+            <div className={classNames("hover:cursor-pointer text-white", {
               "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/account"
             })}>
-              <Link href={""}>
-                <>
-                <span className="p-[2px]"><AiOutlineVerified /></span>
-                <span>Account</span>
-                </>
+              <Link href={"/freelancer/account"}>
+                <a className="flex items-center space-x-2">
+                  <span className="p-[2px]"><AiOutlineVerified /></span>
+                  <span>Account</span>
+                </a>
               </Link>
             </div>
           </div>
