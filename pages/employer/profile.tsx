@@ -3,7 +3,7 @@ import Layout from "../../components/employer/Layout";
 
 const Profile = () => {
   return (
-    <Layout>
+    <Layout title="SkillPay | Employer Profile">
       <div>Profile</div>
     </Layout>
   )

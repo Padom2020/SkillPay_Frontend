@@ -23,7 +23,7 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
       "left-0 top-0 right-0 bottom-0 bg-orange/20 z-70 ease-in-out fixed duration-800": showMenu,
       "md:hidden z-70": !showMenu
     })}>
-      <div className={classNames("fixed top-0 bg-gradient-to-r from-primary to-primary/90 shadow-xl shadow-orange w-[70%] sm:w-[50%] ease-in", {
+      <div className={classNames("fixed top-0 bg-gradient-to-r from-primary to-primary/90 shadow-xl shadow-orange w-[80%] sm:w-[50%] ease-in", {
         "left-0 duration-700": showMenu,
         "-left-[100%] duration-900": !showMenu
       })}>
@@ -62,7 +62,7 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
               <Link href={"/freelancer/notifications"}>
                 <a className="flex items-center space-x-2">
                   <span className="p-[2px] text-white"><MdNotificationsNone /></span>
-                  <span>Notifications</span>
+                  <span className="">Notifications</span>
                 </a>
               </Link>
             </div>

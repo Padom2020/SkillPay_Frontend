@@ -34,7 +34,7 @@ const Layout = ({title, children}: Props) => {
          />
       </Head>
       {/* HAEDER NAV */}
-      <div className={classNames("flex pl-4 md:px-12 items-center justify-between py-3 sticky top-0 left-0 right-0 border-b-2", {
+      <div className={classNames("flex pl-2 md:px-12 items-center justify-between py-3 sticky top-0 left-0 right-0 border-b-2", {
         "bg-white shadow-xl z-70": isScrolling
       })}>
         <div className="hover:cursor-pointer">
