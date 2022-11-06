@@ -1,5 +1,5 @@
-import React from "react"
-import Layout from "../../components/freelancer/Layout"
+import React from "react";
+import Layout from "../../components/employer/Layout";
 
 const Profile = () => {
   return (

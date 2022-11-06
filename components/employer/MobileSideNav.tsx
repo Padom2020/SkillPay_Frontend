@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import Link from "next/link";
 import { BiMessageSquareDetail, BiUser } from "react-icons/bi";
 import { MdNotificationsNone, MdOutlineSpaceDashboard, MdClose } from "react-icons/md";
-import { RiLogoutCircleRLine } from "react-icons/ri";
+import { RiLogoutCircleRLine, RiGroupLine } from "react-icons/ri";
 import {  AiOutlineCreditCard, AiOutlineVerified } from "react-icons/ai";
 import classNames from "classnames";
 import { useRouter } from "next/router";
@@ -37,9 +37,9 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
         <div className="flex flex-col justify-between pl-4 mt-10 pb-10">
           <div className="flex flex-col space-y-4">
             <div className={classNames("flex items-center space-x-2 hover:cursor-pointer text-white", {
-              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer"
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer"
             })}>
-              <Link href={"/freelancer"}>
+              <Link href={"/employer"}>
                 <a className="flex items-center space-x-2">
                   <span className=" p-[2px]"><MdOutlineSpaceDashboard /></span>
                   <span className="">Dashboard</span>
@@ -47,9 +47,9 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
               </Link>
             </div>
             <div className={classNames("hover:cursor-pointer text-white", {
-              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/messages"
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/messages"
             })}>
-              <Link href="/freelancer/messages">
+              <Link href="/employer/messages">
                 <a className="flex items-center space-x-2 ">
                   <span className="p-[2px]"><BiMessageSquareDetail /></span>
                   <span className="">Messages</span>
@@ -57,9 +57,9 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
               </Link>
             </div>
             <div className={classNames("hover:cursor-pointer text-white", {
-              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/notifications"
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/notifications"
             })}>
-              <Link href={"/freelancer/notifications"}>
+              <Link href={"/employer/notifications"}>
                 <a className="flex items-center space-x-2">
                   <span className="p-[2px] text-white"><MdNotificationsNone /></span>
                   <span>Notifications</span>
@@ -67,9 +67,9 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
               </Link>
             </div>
             <div className={classNames("hover:cursor-pointer text-white", {
-              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/profile"
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/profile"
             })}>
-              <Link href={"/freelancer/profile"}>
+              <Link href={"/emplpyer/profile"}>
                 <a className="flex items-center space-x-2">
                   <span className="p-[2px]"><BiUser /></span>
                   <span>Profile</span>
@@ -77,19 +77,49 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
               </Link>
             </div>
             <div className={classNames("hover:cursor-pointer text-white", {
-              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/earnings"
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/candidates"
             })}>
-              <Link href={"/freelancer/earnings"}>
+              <Link href={"/emplpyer/candidates"}>
                 <a className="flex items-center space-x-2">
-                  <span className="p-[2px]"><AiOutlineCreditCard /></span>
-                  <span>Earnings</span>
+                  <span className="p-[2px]"><RiGroupLine /></span>
+                  <span>Candidates</span>
                 </a>
               </Link>
             </div>
             <div className={classNames("hover:cursor-pointer text-white", {
-              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/freelancer/account"
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/employees"
             })}>
-              <Link href={"/freelancer/account"}>
+              <Link href={"/emplpyer/employees"}>
+                <a className="flex items-center space-x-2">
+                  <span className="p-[2px]"><RiGroupLine /></span>
+                  <span>Candidates</span>
+                </a>
+              </Link>
+            </div>
+            <div className={classNames("hover:cursor-pointer text-white", {
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/payroll"
+            })}>
+              <Link href={"/employer/earnings"}>
+                <a className="flex items-center space-x-2">
+                  <span className="p-[2px]"><AiOutlineCreditCard /></span>
+                  <span>Payroll</span>
+                </a>
+              </Link>
+            </div>
+            <div className={classNames("hover:cursor-pointer text-white", {
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/projects"
+            })}>
+              <Link href={"/employer/projects"}>
+                <a className="flex items-center space-x-2">
+                  <span className="p-[2px]"><AiOutlineCreditCard /></span>
+                  <span>Projects</span>
+                </a>
+              </Link>
+            </div>
+            <div className={classNames("hover:cursor-pointer text-white", {
+              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/account"
+            })}>
+              <Link href={"/employer/account"}>
                 <a className="flex items-center space-x-2">
                   <span className="p-[2px]"><AiOutlineVerified /></span>
                   <span>Account</span>
