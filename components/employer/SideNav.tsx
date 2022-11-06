@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { BiMessageSquareDetail, BiUser } from "react-icons/bi";
 import { MdNotificationsNone, MdOutlineSpaceDashboard } from "react-icons/md";
-import { RiLogoutCircleRLine } from "react-icons/ri";
+import { RiLogoutCircleRLine, RiGroupLine } from "react-icons/ri";
 import {  AiOutlineCreditCard, AiOutlineVerified } from "react-icons/ai";
 import classNames from "classnames";
 import { useRouter } from "next/router";
 
-const SideNavFreelancer = () => {
+const SideNav = () => {
   const router = useRouter();
   return (
     <div className="hidden md:flex flex-col justify-between pl-16 mt-10 w-[20%] pb-10">
@@ -56,9 +56,39 @@ const SideNavFreelancer = () => {
         <Link href={""}>
           <a className="flex items-center space-x-2">
             <span className={classNames("p-[2px]", {
+              "bg-orange text-white": router.pathname === "/freelancer/profile"
+            })}><RiGroupLine /></span>
+            <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/freelancer/profile"})}>Candidates</span>
+          </a>
+        </Link>
+      </div>
+      <div className="hover:cursor-pointer">
+        <Link href={""}>
+          <a className="flex items-center space-x-2">
+            <span className={classNames("p-[2px]", {
+              "bg-orange text-white": router.pathname === "/freelancer/profile"
+            })}><RiGroupLine /></span>
+            <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/freelancer/profile"})}>Employees</span>
+          </a>
+        </Link>
+      </div>
+      <div className="hover:cursor-pointer">
+        <Link href={""}>
+          <a className="flex items-center space-x-2">
+            <span className={classNames("p-[2px]", {
               "bg-orange text-white": router.pathname === "/freelancer/earnings"
             })}><AiOutlineCreditCard /></span>
-            <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/freelancer/earnings"})}>Earnings</span>
+            <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/freelancer/earnings"})}>Payroll</span>
+          </a>
+        </Link>
+      </div>
+      <div className="hover:cursor-pointer">
+        <Link href={""}>
+          <a className="flex items-center space-x-2">
+            <span className={classNames("p-[2px]", {
+              "bg-orange text-white": router.pathname === "/freelancer/earnings"
+            })}><AiOutlineCreditCard /></span>
+            <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/freelancer/earnings"})}>Projects</span>
           </a>
         </Link>
       </div>
@@ -87,4 +117,4 @@ const SideNavFreelancer = () => {
   )
 }
 
-export default SideNavFreelancer
+export default SideNav

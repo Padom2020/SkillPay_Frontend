@@ -5,15 +5,15 @@ import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { useRouter } from "next/router";
 import classNames from "classnames";
-import HeaderFreelancer from "./HeaderFreelancer";
-import SideNavFreelancer from "./SideNavFreelancer";
-import MobileSideNavFreelancer from "./MobileSideNavFreelancer";
+import Header from "./Header";
+import SideNav from "./SideNav";
+import MobileSideNav from "./MobileSideNav";
 
 type Props = {
   title?: string,
   children?: React.ReactNode
 }
-const LayoutFreelancer = ({title, children}: Props) => {
+const Layout = ({title, children}: Props) => {
   const router = useRouter();
   const [isScrolling, setScrolling] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -34,7 +34,7 @@ const LayoutFreelancer = ({title, children}: Props) => {
          />
       </Head>
       {/* HAEDER NAV */}
-      <div className={classNames("flex pl-8 md:px-12 items-center justify-between py-3 sticky top-0 left-0 right-0 border-b-2", {
+      <div className={classNames("flex pl-4 md:px-12 items-center justify-between py-3 sticky top-0 left-0 right-0 border-b-2", {
         "bg-white shadow-xl z-70": isScrolling
       })}>
         <div className="hover:cursor-pointer">
@@ -48,15 +48,15 @@ const LayoutFreelancer = ({title, children}: Props) => {
           </Link>
         </div>
         <div>
-          <HeaderFreelancer />
+          <Header />
         </div>
         {/* HANBURDER */}
         <div className="text-orange text-xl cursor-pointer mr-2 block md:hidden" onClick={() => setShowMenu(true)}><FaBars /></div>
       </div>
       <div className="flex">
         {/* SIDE NAV */}
-        <SideNavFreelancer />
-        <MobileSideNavFreelancer showMenu={showMenu} setShowMenu={setShowMenu} />
+        <SideNav />
+        <MobileSideNav showMenu={showMenu} setShowMenu={setShowMenu} />
         {/* CONTENT */}
         <div className="w-[100%] md:w-[80%]">
           {children}
@@ -66,4 +66,4 @@ const LayoutFreelancer = ({title, children}: Props) => {
   )
 }
 
-export default LayoutFreelancer
+export default Layout

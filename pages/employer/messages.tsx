@@ -3,7 +3,7 @@ import Layout from "../../components/freelancer/Layout";
 
 const Messages = () => {
   return (
-    <Layout title="SkillPay | Freelancer Messages">
+    <Layout title="SkillPay | Employer Messages">
       <div>messages</div>
     </Layout>
   )

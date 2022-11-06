@@ -1,17 +1,10 @@
 
 import React, {useState} from "react";
-import LayoutFreelancer from "../../components/LayoutFreelancer";
-import { VscArrowSmallLeft, VscArrowSmallRight, VscVerified } from "react-icons/vsc";
-// import { BiMessageAltDetail } from 'react-icons/bi';
-// import { FcGoogle } from "react-icons/fc";
-// import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import Layout from "../../components/freelancer/Layout";
+import { VscArrowSmallLeft, VscArrowSmallRight } from "react-icons/vsc";
 import FreelancerJobCompleted from "../../components/FreelancerJobCompleted";
 import FreelancerReview from "../../components/FreelancerReview";
-//import { SlLocationPin } from "react-icons/sl";
-//import { HiOutlinePhoneMissedCall } from "react-icons/hi";
-//import { CiMail } from "react-icons/ci";
 import { TiEdit } from "react-icons/ti";
-//import MessageModal from "../../components/MessageModal";
 
 const Index = () => {
   const [showMsgModal, setMsgModal] = useState(false);
@@ -73,7 +66,7 @@ const Index = () => {
   }
 
   return (
-    <LayoutFreelancer title="SkillPay | Freelancer">
+    <Layout title="SkillPay | Freelancer">
       <div>
         <img src={"/images/freelancer-header.svg"} className="" />
       </div>
@@ -207,7 +200,7 @@ const Index = () => {
       {/* {
         showMsgModal && <MessageModal closeModal={setMsgModal} />
       } */}
-    </LayoutFreelancer>
+    </Layout>
   )
 }
 

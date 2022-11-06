@@ -11,7 +11,7 @@ type Props = {
   showMenu: boolean,
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>
 }
-const MobileSideNavFreelancer = ({showMenu, setShowMenu}: Props) => {
+const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -113,4 +113,4 @@ const MobileSideNavFreelancer = ({showMenu, setShowMenu}: Props) => {
   )
 }
 
-export default MobileSideNavFreelancer
+export default MobileSideNav

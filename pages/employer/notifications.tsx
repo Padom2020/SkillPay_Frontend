@@ -3,7 +3,7 @@ import Layout from "../../components/freelancer/Layout";
 
 const Notifications = () => {
   return (
-    <Layout title="SkillPay | Freelancer Notifications">
+    <Layout>
       <div>Notifications</div>
     </Layout>
   )

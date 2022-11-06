@@ -1,11 +1,11 @@
 import React from "react";
-import LayoutFreelancer from "../../components/LayoutFreelancer";
+import Layout from "../../components/freelancer/Layout";
 
 const Profile = () => {
   return (
-    <LayoutFreelancer title="SkillPay | Freelancer Profile">
+    <Layout title="SkillPay | Freelancer Profile">
       <div>Profile</div>
-    </LayoutFreelancer>
+    </Layout>
   )
 }
 

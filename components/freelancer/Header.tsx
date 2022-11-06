@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { MdNotificationsNone } from "react-icons/md";
 
-const HeaderFreelancer = () => {
+const Header = () => {
   const router = useRouter();
   return (
     <div className="hidden md:flex items-center space-x-6 text-[20px]">
@@ -22,4 +22,4 @@ const HeaderFreelancer = () => {
   )
 }
 
-export default HeaderFreelancer
+export default Header
