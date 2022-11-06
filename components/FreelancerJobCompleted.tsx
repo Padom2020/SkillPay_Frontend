@@ -4,7 +4,7 @@ type Props = {
 
 const FreelancerJobCompleted = ({job}: Props) => {
   return (
-    <div className="w-[400px] rounded-[5px] shadow-lg px-3 pt-3 bg-white">
+    <div className="rounded-[5px] shadow-lg px-3 pt-3 bg-white  w-[100%]">
       <div>
         <img src={job.image} alt="" className="rounded-[5px]" />
       </div>

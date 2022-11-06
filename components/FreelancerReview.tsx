@@ -9,7 +9,7 @@ type Props ={
 }
 const FreelancerReview = ({review}: Props) => {
   return (
-    <div className="w-[400px] rounded-[5px] px-3 pt-3 bg-[#FAFBFC]">
+    <div className="w-[100%] rounded-[5px] px-3 pt-3 bg-[#FAFBFC]">
       <div className="text-[rgba(8, 8, 18, 0.7)] text-[14px] font-[400]">{review.comment}</div>
       <div className="flex items-center space-x-2 mb-3 mt-8">
         <div>
