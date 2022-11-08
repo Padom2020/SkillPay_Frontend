@@ -14,6 +14,7 @@ module.exports = {
             "over-lay": "rgba(2, 6, 72, 0.1)",
             gray2: "rgba(8, 8, 18, 0.4)",
             gray3: "rgba(2, 6, 72, 0.1)",
+            gray4: "rgba(8, 8, 18, 0.7)",
 
          },
          zIndex: {
