@@ -1,15 +1,16 @@
 import React, {useState} from "react";
 import { MdAccessTime, MdPlayArrow } from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
-import { TiArrowRight } from "react-icons/ti";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io"
+import { TbHandFinger } from "react-icons/tb";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+import { HiOutlineArrowTrendingUp } from "react-icons/hi2";
 import Layout from "../../components/freelancer/Layout";
 import Search from "../../components/Search";
 import { BsBriefcase } from "react-icons/bs";
 import Select from "../../components/Select";
 import ReactApexChart from "react-apexcharts";
 
-const Earnings = () => {
+const Projects = () => {
   const [searchFilters, setSearchFilters] = useState({
     textSearch: "",
     filter1: "",
@@ -47,11 +48,11 @@ const Earnings = () => {
   };
   const jobs = [
     {
+      project: "Front End",
       client: {
         name: "John Doe",
         role: "Developer"
       },
-      job: "Front-End",
       started: {
         date: "14 Feb. 2022",
         time: "04:00PM",
@@ -60,15 +61,15 @@ const Earnings = () => {
         date: "14 Feb. 2022",
         time: "04:00PM"
       },
-      amount: "63738",
-      paymentStatus: "paid"
+      projectBrief: "Download",
+      projectStatus: "In Progress"
     },
     {
+      project: "Front End",
       client: {
         name: "John Doe",
         role: "Developer"
       },
-      job: "Front-End",
       started: {
         date: "14 Feb. 2022",
         time: "04:00PM",
@@ -77,15 +78,15 @@ const Earnings = () => {
         date: "14 Feb. 2022",
         time: "04:00PM"
       },
-      amount: "63738",
-      paymentStatus: "paid"
+      projectBrief: "Download",
+      projectStatus: "In Progress"
     },
     {
+      project: "Front End",
       client: {
         name: "John Doe",
         role: "Developer"
       },
-      job: "Front-End",
       started: {
         date: "14 Feb. 2022",
         time: "04:00PM",
@@ -94,15 +95,15 @@ const Earnings = () => {
         date: "14 Feb. 2022",
         time: "04:00PM"
       },
-      amount: "63738",
-      paymentStatus: "paid"
+      projectBrief: "Download",
+      projectStatus: "In Progress"
     },
     {
+      project: "Front End",
       client: {
         name: "John Doe",
         role: "Developer"
       },
-      job: "Front-End",
       started: {
         date: "14 Feb. 2022",
         time: "04:00PM",
@@ -111,15 +112,15 @@ const Earnings = () => {
         date: "14 Feb. 2022",
         time: "04:00PM"
       },
-      amount: "63738",
-      paymentStatus: "paid"
+      projectBrief: "Download",
+      projectStatus: "In Progress"
     },
     {
+      project: "Front End",
       client: {
         name: "John Doe",
         role: "Developer"
       },
-      job: "Front-End",
       started: {
         date: "14 Feb. 2022",
         time: "04:00PM",
@@ -128,15 +129,15 @@ const Earnings = () => {
         date: "14 Feb. 2022",
         time: "04:00PM"
       },
-      amount: "63738",
-      paymentStatus: "paid"
+      projectBrief: "Download",
+      projectStatus: "In Progress"
     },
     {
+      project: "Front End",
       client: {
         name: "John Doe",
         role: "Developer"
       },
-      job: "Front-End",
       started: {
         date: "14 Feb. 2022",
         time: "04:00PM",
@@ -145,15 +146,15 @@ const Earnings = () => {
         date: "14 Feb. 2022",
         time: "04:00PM"
       },
-      amount: "63738",
-      paymentStatus: "paid"
+      projectBrief: "Download",
+      projectStatus: "In Progress"
     },
     {
+      project: "Front End",
       client: {
         name: "John Doe",
         role: "Developer"
       },
-      job: "Front-End",
       started: {
         date: "14 Feb. 2022",
         time: "04:00PM",
@@ -162,16 +163,16 @@ const Earnings = () => {
         date: "14 Feb. 2022",
         time: "04:00PM"
       },
-      amount: "63738",
-      paymentStatus: "paid"
-    }
+      projectBrief: "Download",
+      projectStatus: "In Progress"
+    },
   ]
 
   return (
     <Layout title="SkillPay | Freelancer Earnings">
       <div className="mt-6 px-2 md:px-0 md:mr-14">
         <div className="flex flex-col md:flex-row items-center md:items-left justify-center space-y-2 md:space-y-0 md:justify-between">
-          <h1 className="text-sm md:text-base lg:text-[22px] text-[#080812] font-[500]">Earings <sub className="text-[#948D8D] font-[400] text-[10px] lg:text-[12px]">$8000</sub></h1>
+          <h1 className="text-sm md:text-base lg:text-[22px] text-[#080812] font-[500]">Projects <sub className="text-[#948D8D] font-[400] text-[10px] lg:text-[12px]">110</sub></h1>
           <div className="flex justify-between items-center h-10 border rounded-[5px] px-2 bg-[#F8F9FB]">
             <div className="flex items-center space-x-2 h-full">
               <FaRegCalendarAlt />
@@ -183,39 +184,35 @@ const Earnings = () => {
         {/* BADGES */}
         <div className="grid grid-col-1 md:grid-cols-3 gap-3 w-[95%] mx-auto md:mx-0 md:w-[85%] my-9">
           {/* ONE */}
-          <div className="text-center border rounded-md pt-4 pb-8">
-            <p className="text-gray2 text-xs md:text-sm lg:text-base font-[500]">Earning</p>
-            <p className="text-sm md:text-base lg:text-[204x] text-gray4 font-[700] mb-4 mt-2">$ 8000</p>
-            <div><span className="p-3 bg-green-100 text-[#59AA58]">-4%</span></div>
+          <div className="text-center border rounded-md py-6">
+            <p className="text-gray2 text-xs md:text-sm lg:text-base font-[500]">Toatl Projects</p>
+            <p className="text-sm md:text-base lg:text-[20px] text-gray4 font-[700]">867</p>
+            <div className="flex items-center justify-center space-x-1 text-[#59AA58]"><HiOutlineArrowTrendingUp className="text-xl" /><span className="">1.5%</span></div>
           </div>
           {/* TWO */}
-          <div className="text-center border rounded-md py-4">
-            <p className="text-gray2 text-xs md:text-sm lg:text-base font-[500]">Pending</p>
-            <p className="text-sm md:text-base lg:text-[204x] text-gray4 font-[700] mb-4 mt-2">$ 790</p>
-            <div><span className="p-3 bg-orange/30 text-[#FC0303]">-4%</span></div>
+          <div className="text-center border rounded-md py-6">
+            <p className="text-gray2 text-xs md:text-sm lg:text-base font-[500]">Toatl Projects</p>
+            <p className="text-sm md:text-base lg:text-[20px] text-gray4 font-[700]">867</p>
+            <div className="flex items-center justify-center space-x-1 text-[#59AA58]"><HiOutlineArrowTrendingUp className="text-xl" /><span className="">1.5%</span></div>
           </div>
           {/* THREE */}
-          <div className="text-center border rounded-md py-4">
-            <p className="text-gray2 text-xs md:text-sm lg:text-base font-[500]">Balance</p>
-            <p className="text-sm md:text-base lg:text-[204x] text-gray4 font-[700] mb-2 mt-2">$ 8000</p>
-            <div className="flex justify-center">
-              <div className="flex items-center space-x-1 text-[#F24726] cursor-pointer group">
-                <span>Withdraw</span><span className="text-lg md:text-xl lg:text-2xl mt-1 group-hover:translate-x-2 duration-500"><TiArrowRight /></span>
-              </div>
-            </div>
+          <div className="text-center border rounded-md py-6">
+            <p className="text-gray2 text-xs md:text-sm lg:text-base font-[500]">Active</p>
+            <p className="text-sm md:text-base lg:text-[20px] text-gray4 font-[700]">50</p>
+            <div className="flex items-center justify-center space-x-1 text-[#59AA58]"><HiOutlineArrowTrendingUp className="text-xl" /><span className="">1.5%</span></div>
           </div>
         </div>
         {/* CHART */}
         <div className="border rounded-md p-2">
-          <h2 className="flex items-center space-x-3 text-[#170455] font-[700] text-[20px]"><span>Total Earnings</span><span>$8000</span></h2>
-          <ReactApexChart type="area" series={chart.series} options={chart.options} height={300} />
+          <h2 className="flex items-center space-x-3 text-[#170455] font-[700] text-[20px]"><span>Total Projects</span><span>87</span></h2>
+          <ReactApexChart type="bar" series={chart.series} options={chart.options} height={300} />
         </div>
         <div className="w-[100%] md:w-[75%] lg:w-[55%] mt-4 mb-2">
-          <Search placeholder="Search" />
+          <Search placeholder="Search  project" />
         </div>
         <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2">
           <div className="w-[100%] md:w-[60%] lg:w-[20%]">
-            <Select icon={<BsBriefcase />} value={searchFilters.filter1} onChange={onChange("filter1")} placeHolder="Paid" >
+            <Select icon={<BsBriefcase />} value={searchFilters.filter1} onChange={onChange("filter1")} placeHolder="In Progress" >
               <option value="Unpaid" className="cursor-pointer hover:bg-orange pl-3 hover:text-white">Unpaid</option>
               <option value="Awaiting" className="cursor-pointer hover:bg-orange pl-3 hover:text-white">Awaiting</option>
               <option value="Pending" className="cursor-pointer hover:bg-orange pl-3 hover:text-white">Paending</option>
@@ -236,16 +233,16 @@ const Earnings = () => {
                 <th className="pl-3"><input type="checkbox" name="" id="" className="accent-orange" /></th>
                 <th className="py-3">
                   <div className="flex space-x-2">
-                    <p>Clients</p>
+                    <p>Projects</p>
                     <p className="flex flex-col items-center">
                       <span className="-mb-2 "><IoMdArrowDropup /></span>
                       <span><IoMdArrowDropdown /></span>
                     </p>
                   </div>
                 </th>
-                <th>
+                <th className="py-3">
                   <div className="flex space-x-2">
-                    <p>Job</p>
+                    <p>Clients</p>
                     <p className="flex flex-col items-center">
                       <span className="-mb-2 "><IoMdArrowDropup /></span>
                       <span><IoMdArrowDropdown /></span>
@@ -263,7 +260,7 @@ const Earnings = () => {
                 </th>
                 <th>
                   <div className="flex space-x-2">
-                    <p>Completed</p>
+                    <p>Due Date</p>
                     <p className="flex flex-col items-center">
                       <span className="-mb-2 "><IoMdArrowDropup /></span>
                       <span><IoMdArrowDropdown /></span>
@@ -272,7 +269,7 @@ const Earnings = () => {
                 </th>
                 <th>
                   <div className="flex space-x-2">
-                    <p>Amount</p>
+                    <p>Project brief</p>
                     <p className="flex flex-col items-center">
                       <span className="-mb-2 "><IoMdArrowDropup /></span>
                       <span><IoMdArrowDropdown /></span>
@@ -281,7 +278,16 @@ const Earnings = () => {
                 </th>
                 <th>
                   <div className="flex space-x-2">
-                    <p>Payment Status</p>
+                    <p>Project Status</p>
+                    <p className="flex flex-col items-center">
+                      <span className="-mb-2 "><IoMdArrowDropup /></span>
+                      <span><IoMdArrowDropdown /></span>
+                    </p>
+                  </div>
+                </th>
+                <th>
+                  <div className="flex space-x-2">
+                    <p>Action</p>
                     <p className="flex flex-col items-center">
                       <span className="-mb-2 "><IoMdArrowDropup /></span>
                       <span><IoMdArrowDropdown /></span>
@@ -294,6 +300,7 @@ const Earnings = () => {
               {
                 jobs.map((job, index) => <tr className="text-left text-base" key={++index}>
                 <td className="py-2 px-3"><input type="checkbox" className="accent-orange" /></td>
+                <td>{job.project}</td>
                 <td className="py-3">
                   <div className="flex space-x-1">
                     <p className="pt-[2px]"><img src="/images/profilepix.png" alt="" className="w-[24px] h-[24px] rounded-full" /></p>
@@ -303,7 +310,6 @@ const Earnings = () => {
                     </div>
                   </div>
                 </td>
-                <td>{job.job}</td>
                 <td className="text-gray4 font-[700]">
                   <div className="flex flex-col">
                     <p>{job.started.date}</p>
@@ -316,8 +322,14 @@ const Earnings = () => {
                     <p>{job.completed.time}</p>
                   </div>
                 </td>
-                <td><span className="text-[#948D8D] font-[700]">${job.amount}</span></td>
-                <td><span className="bg-gray5 p-2 text-[#035CFF]">{job.paymentStatus}</span></td>
+                <td><span className="text-[#948D8D] font-[700]">{job.projectBrief}</span></td>
+                <td><span className="bg-gray5 p-2 text-[#035CFF]">{job.projectStatus}</span></td>
+                <td>
+                  <div className="flex justify-center items-center space-x-1 border rounded-lg mr-1 font-[500] w-[90%] cursor-pointer">
+                    <span className="text-green-400 rotate-90"><TbHandFinger /></span>
+                    <span>Fill milestone</span>
+                  </div>
+                </td>
               </tr>
               )}
             </tbody>
@@ -328,4 +340,4 @@ const Earnings = () => {
   )
 }
 
-export default Earnings
+export default Projects;
