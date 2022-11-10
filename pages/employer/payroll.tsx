@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Layout from '../../components/employer/Layout';
 import ReactApexChart from 'react-apexcharts';
+import { FaCalendarAlt } from 'react-icons/fa';
+import { AiFillCaretDown } from 'react-icons/ai';
 
 const Payroll = () => {
    //data for payroll
@@ -8,6 +10,46 @@ const Payroll = () => {
       options: {
          chart: {
             id: 'apexchart-example',
+         },
+         plotOptions: {
+            bar: {
+               horizontal: false,
+               columnWidth: '25%',
+               endingShape: 'rounded',
+            },
+         },
+         dataLabels: {
+            enabled: false,
+         },
+         legend: {
+            position: 'top',
+         },
+         title: {
+            text: 'Payroll Summary',
+            style: {
+               fontSize: '14px',
+            },
+         },
+         stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent'],
+         },
+         // yaxis: {
+         //    title: {
+         //       text: '$ (thousands)',
+         //    },
+         // },
+         colors: ['#170455', '#F24726'],
+         fill: {
+            opacity: 1,
+         },
+         tooltip: {
+            y: {
+               formatter: function (val) {
+                  return '$ ' + val + ' thousands';
+               },
+            },
          },
          xaxis: {
             categories: [
@@ -18,52 +60,52 @@ const Payroll = () => {
                '5 Oct',
                '6 Oct',
                '7 Oct',
-               '8 Oct',
-               '9 Oct',
-               '10 Oct',
-               '11 Oct',
-               '12 Oct',
             ],
-         },
-         fill: {
-            type: 'solid',
-         },
-         colors: [
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-            '#F24726',
-         ],
-         dataLabels: {
-            enabled: false,
          },
       },
       series: [
          {
-            name: 'Earnings',
-            data: [0, 30, 10, 35, 15, 40, 50, 65, 45, 65, 70, 0],
+            name: 'Taxes',
+            data: [44, 55, 57, 56, 61, 58, 63],
+         },
+         {
+            name: 'Revenue',
+            data: [76, 85, 101, 98, 87, 105, 91],
          },
       ],
    });
    return (
       <Layout title='SkillPay | Employer Payroll'>
-         <div>Payroll now</div>
-         <div>
-            <ReactApexChart
-               type='bar'
-               series={chart.series}
-               options={chart.options}
-               height={300}
-            />
+         <div className='pt-10 max-w-[90%]'>
+            <div className='flex items-center justify-between pb-5'>
+               <div className='flex items-baseline space-x-1'>
+                  <h3 className='font-semibold'>Payroll</h3>
+                  <span className='text-[10px] font-semibold text-[#948D8D]'>
+                     110
+                  </span>
+               </div>
+               <div className='flex items-center space-x-3 bg-[#f3f4f6] p-1 rounded-sm'>
+                  <FaCalendarAlt className='text-sm' />
+                  <div className='flex items-center space-x-2 text-sm'>
+                     <p>Time period: Today</p>
+                     <AiFillCaretDown />
+                  </div>
+               </div>
+            </div>
+            <div className='flex space-x-3'>
+               <div className='w-[60%] border'>
+                  <div className='p-3'>
+                     <ReactApexChart
+                        type='bar'
+                        series={chart.series}
+                        // @ts-expect-error
+                        options={chart.options}
+                        height={400}
+                     />
+                  </div>
+               </div>
+               <div className='w-[40%]'>solo</div>
+            </div>
          </div>
       </Layout>
    );
