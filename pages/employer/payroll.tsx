@@ -104,7 +104,15 @@ const Payroll = () => {
                      />
                   </div>
                </div>
-               <div className='w-[40%]'>solo</div>
+               <div className='w-[40%] border'>
+                  <div className='p-3'>
+                     <h3 className='font-bold'>Payment status</h3>
+                     <p className='flex items-center space-x-5'>
+                        <span>34</span>
+                        <span>Employees</span>
+                     </p>
+                  </div>
+               </div>
             </div>
          </div>
       </Layout>
