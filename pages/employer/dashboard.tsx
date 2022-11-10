@@ -76,9 +76,9 @@ const Dashboard = () => {
                ))}
             </div>
             {/* Body */}
-            <div className='flex w-full space-x-3'>
+            <div className='flex flex-col lg:flex-row w-full px-3 md:px-0 lg:space-x-3'>
                {/* overview */}
-               <div className='w-[60%] space-y-5'>
+               <div className='lg:w-[60%] space-y-5 pl-3 pt-5 md:pt-0'>
                   <div className='border p-5 rounded-md'>
                      <div className='w-[90%]'>
                         <h3 className='font-bold pb-5'>Overview</h3>
@@ -243,7 +243,7 @@ const Dashboard = () => {
                   </div>
                </div>
                {/* Job listing */}
-               <div className='w-[40%]'>
+               <div className='lg:w-[40%] pl-3 pt-5 lg:pt-0'>
                   <div className='border p-5 rounded-md'>
                      <div className='w-[90%]'>
                         <h3 className='font-bold pb-5'>Job listings</h3>
