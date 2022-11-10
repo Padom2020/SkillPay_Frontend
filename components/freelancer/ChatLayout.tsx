@@ -37,7 +37,7 @@ const ChatLayout = ({
                 border="1px solid"
                 borderColor="gray.300"
                 h="fit-content">
-                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3">
+                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3" p="3">
                 <div className="flex space-x-3">
                 <img src="/images/profilepix2.png" alt="" className="rounded-full w-12 h-12" />
                 <div>
@@ -47,7 +47,7 @@ const ChatLayout = ({
                 </div>
                 </div>
                 </Box>
-                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3">
+                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3" p="3">
                 <div className="flex space-x-3">
                 <img src="/images/profilepix.png" alt="" className="rounded-full w-12 h-12" />
                 <div>
@@ -57,7 +57,7 @@ const ChatLayout = ({
                 </div>
                 </div>
                 </Box>
-                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3">
+                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3" p="3">
                 <div className="flex space-x-3">
                 <img src="/images/productsample.png" alt="" className="rounded-full w-12 h-12" />
                 <div>
@@ -67,7 +67,7 @@ const ChatLayout = ({
                 </div>
                 </div>
                 </Box>
-                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3">
+                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3" p="3">
                 <div className="flex space-x-3">
                 <img src="/images/profilepix3.png" alt="" className="rounded-full w-12 h-12" />
                 <div>
@@ -77,7 +77,7 @@ const ChatLayout = ({
                 </div>
                 </div>
                 </Box>
-                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3">
+                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3" p="3">
                 <div className="flex space-x-3">
                 <img src="/images/productsample.png" alt="" className="rounded-full w-12 h-12" />
                 <div>
@@ -87,7 +87,7 @@ const ChatLayout = ({
                 </div>
                 </div>
                 </Box>
-                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3">
+                <Box borderBlock={"1px solid"} borderColor="gray.200" py="3" p="3">
                 <div className="flex space-x-3">
                 <img src="/images/profilepix3.png" alt="" className="rounded-full w-12 h-12" />
                 <div>
@@ -100,7 +100,7 @@ const ChatLayout = ({
               </Box>
             )}
             <Box w={["full", "full", "65%"]}>
-              <HStack background={"gray.100"} p="3" borderBlock={"1px solid"} borderColor="gray.300">
+              <HStack background={"gray.100"} p="3" borderBlock={"1px solid"} borderColor="gray.300" >
                  
                 <div className="flex space-x-3">
                 <img src="/images/profilepix3.png" alt="" className="rounded-full w-12 h-12" />
