@@ -2,10 +2,12 @@ import React, {useState} from "react";
 import { MdAccessTime, MdPlayArrow } from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { TiArrowRight } from "react-icons/ti";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io"
 import Layout from "../../components/freelancer/Layout";
 import Search from "../../components/Search";
 import { BsBriefcase } from "react-icons/bs";
 import Select from "../../components/Select";
+import ReactApexChart from "react-apexcharts";
 
 const Earnings = () => {
   const [searchFilters, setSearchFilters] = useState({
@@ -19,12 +21,20 @@ const Earnings = () => {
         id: 'apexchart-example'
       },
       xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-      }
+        categories: ["1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct"]
+      },
+      fill: {
+        type: "solid",
+      },
+      colors: ["#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726"],
+      dataLabels: {
+        enabled: false
+      },
+      
     },
     series: [{
       name: 'Earnings',
-      data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+      data: [0, 30, 10, 35, 15, 40, 50, 65, 45, 65, 70, 0]
     }]
   });
   const onChange = (filter: string) => (evt: React.MouseEvent) => {
@@ -34,7 +44,128 @@ const Earnings = () => {
       ...searchFilters,
       [filter]: targetValue,
     })
-  }
+  };
+  const jobs = [
+    {
+      client: {
+        name: "John Doe",
+        role: "Developer"
+      },
+      job: "Front-End",
+      started: {
+        date: "14 Feb. 2022",
+        time: "04:00PM",
+      },
+      completed: {
+        date: "14 Feb. 2022",
+        time: "04:00PM"
+      },
+      amount: "63738",
+      paymentStatus: "paid"
+    },
+    {
+      client: {
+        name: "John Doe",
+        role: "Developer"
+      },
+      job: "Front-End",
+      started: {
+        date: "14 Feb. 2022",
+        time: "04:00PM",
+      },
+      completed: {
+        date: "14 Feb. 2022",
+        time: "04:00PM"
+      },
+      amount: "63738",
+      paymentStatus: "paid"
+    },
+    {
+      client: {
+        name: "John Doe",
+        role: "Developer"
+      },
+      job: "Front-End",
+      started: {
+        date: "14 Feb. 2022",
+        time: "04:00PM",
+      },
+      completed: {
+        date: "14 Feb. 2022",
+        time: "04:00PM"
+      },
+      amount: "63738",
+      paymentStatus: "paid"
+    },
+    {
+      client: {
+        name: "John Doe",
+        role: "Developer"
+      },
+      job: "Front-End",
+      started: {
+        date: "14 Feb. 2022",
+        time: "04:00PM",
+      },
+      completed: {
+        date: "14 Feb. 2022",
+        time: "04:00PM"
+      },
+      amount: "63738",
+      paymentStatus: "paid"
+    },
+    {
+      client: {
+        name: "John Doe",
+        role: "Developer"
+      },
+      job: "Front-End",
+      started: {
+        date: "14 Feb. 2022",
+        time: "04:00PM",
+      },
+      completed: {
+        date: "14 Feb. 2022",
+        time: "04:00PM"
+      },
+      amount: "63738",
+      paymentStatus: "paid"
+    },
+    {
+      client: {
+        name: "John Doe",
+        role: "Developer"
+      },
+      job: "Front-End",
+      started: {
+        date: "14 Feb. 2022",
+        time: "04:00PM",
+      },
+      completed: {
+        date: "14 Feb. 2022",
+        time: "04:00PM"
+      },
+      amount: "63738",
+      paymentStatus: "paid"
+    },
+    {
+      client: {
+        name: "John Doe",
+        role: "Developer"
+      },
+      job: "Front-End",
+      started: {
+        date: "14 Feb. 2022",
+        time: "04:00PM",
+      },
+      completed: {
+        date: "14 Feb. 2022",
+        time: "04:00PM"
+      },
+      amount: "63738",
+      paymentStatus: "paid"
+    }
+  ]
 
   return (
     <Layout title="SkillPay | Freelancer Earnings">
@@ -77,6 +208,7 @@ const Earnings = () => {
         {/* CHART */}
         <div className="border rounded-md p-2">
           <h2 className="flex items-center space-x-3 text-[#170455] font-[700] text-[20px]"><span>Total Earnings</span><span>$8000</span></h2>
+          <ReactApexChart type="area" series={chart.series} options={chart.options} height={300} />
         </div>
         <div className="w-[100%] md:w-[75%] lg:w-[55%] mt-4 mb-2">
           <Search placeholder="Search  project" />
@@ -96,6 +228,100 @@ const Earnings = () => {
               <option value="Pending" className="cursor-pointer hover:bg-orange pl-3 hover:text-white">Paending</option>
             </Select>
           </div>
+        </div>
+        <div className="border rounded-lg mt-4">
+          <table className="text-left w-[100%]">
+            <thead>
+              <tr className="border-b-[1px]">
+                <th className="pl-3"><input type="checkbox" name="" id="" className="accent-orange" /></th>
+                <th className="py-3">
+                  <div className="flex space-x-2">
+                    <p>Clients</p>
+                    <p className="flex flex-col items-center">
+                      <span className="-mb-2 "><IoMdArrowDropup /></span>
+                      <span><IoMdArrowDropdown /></span>
+                    </p>
+                  </div>
+                </th>
+                <th>
+                  <div className="flex space-x-2">
+                    <p>Job</p>
+                    <p className="flex flex-col items-center">
+                      <span className="-mb-2 "><IoMdArrowDropup /></span>
+                      <span><IoMdArrowDropdown /></span>
+                    </p>
+                  </div>
+                </th>
+                <th>
+                  <div className="flex space-x-2">
+                    <p>Started</p>
+                    <p className="flex flex-col items-center">
+                      <span className="-mb-2 "><IoMdArrowDropup /></span>
+                      <span><IoMdArrowDropdown /></span>
+                    </p>
+                  </div>
+                </th>
+                <th>
+                  <div className="flex space-x-2">
+                    <p>Completed</p>
+                    <p className="flex flex-col items-center">
+                      <span className="-mb-2 "><IoMdArrowDropup /></span>
+                      <span><IoMdArrowDropdown /></span>
+                    </p>
+                  </div>
+                </th>
+                <th>
+                  <div className="flex space-x-2">
+                    <p>Amount</p>
+                    <p className="flex flex-col items-center">
+                      <span className="-mb-2 "><IoMdArrowDropup /></span>
+                      <span><IoMdArrowDropdown /></span>
+                    </p>
+                  </div>
+                </th>
+                <th>
+                  <div className="flex space-x-2">
+                    <p>Payment Status</p>
+                    <p className="flex flex-col items-center">
+                      <span className="-mb-2 "><IoMdArrowDropup /></span>
+                      <span><IoMdArrowDropdown /></span>
+                    </p>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                jobs.map((job, index) => <tr className="text-left text-base" key={++index}>
+                <td className="py-2 px-3"><input type="checkbox" className="accent-orange" /></td>
+                <td className="py-3">
+                  <div className="flex space-x-1">
+                    <p className="pt-[2px]"><img src="/images/profilepix.png" alt="" className="w-[24px] h-[24px] rounded-full" /></p>
+                    <div className="">
+                      <p className="font-bold text-[#080812]">{job.client.name}</p>
+                      <p className="text-[#948D8D]">{job.client.role}</p>
+                    </div>
+                  </div>
+                </td>
+                <td>{job.job}</td>
+                <td className="text-gray4 font-[700]">
+                  <div className="flex flex-col">
+                    <p>{job.started.date}</p>
+                    <p>{job.started.time}</p>
+                  </div>
+                </td>
+                <td className="text-gray4 font-[700]">
+                  <div className="flex flex-col">
+                    <p>{job.completed.date}</p>
+                    <p>{job.completed.time}</p>
+                  </div>
+                </td>
+                <td><span className="text-[#948D8D] font-[700]">${job.amount}</span></td>
+                <td><span className="bg-gray5 p-2 text-[#035CFF]">{job.paymentStatus}</span></td>
+              </tr>
+              )}
+            </tbody>
+          </table>
         </div>
       </div>
     </Layout>
