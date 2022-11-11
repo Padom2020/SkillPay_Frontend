@@ -175,7 +175,7 @@ const Earnings = () => {
           <div className="flex justify-between items-center h-10 border rounded-[5px] px-2 bg-[#F8F9FB]">
             <div className="flex items-center space-x-2 h-full">
               <FaRegCalendarAlt />
-              <span className="text-lg">Tme period: Today</span>
+              <span className="text-lg">Time period: Today</span>
             </div>
             <div><MdPlayArrow className="rotate-90" /></div>
           </div>
