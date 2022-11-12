@@ -7,8 +7,12 @@ import Layout from "../../components/freelancer/Layout";
 import Search from "../../components/Search";
 import { BsBriefcase } from "react-icons/bs";
 import Select from "../../components/Select";
-import ReactApexChart from "react-apexcharts";
+//import ReactApexChart from "react-apexcharts";
+import dynamic from "next/dynamic";
 
+const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+  ssr: false
+})
 const Earnings = () => {
   const [searchFilters, setSearchFilters] = useState({
     textSearch: "",

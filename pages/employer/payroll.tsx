@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Layout from '../../components/employer/Layout';
-import ReactApexChart from 'react-apexcharts';
 import { FaCalendarAlt } from 'react-icons/fa';
 import { AiFillCaretDown } from 'react-icons/ai';
 import Image from 'next/image';
@@ -8,6 +7,11 @@ import { BiSearch, BiTimeFive } from 'react-icons/bi';
 import { MdWorkOutline } from 'react-icons/md';
 import { BsBarChart } from 'react-icons/bs';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
+import dynamic from 'next/dynamic';
+
+const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+   ssr: false
+})
 
 const Payroll = () => {
    //data for payroll

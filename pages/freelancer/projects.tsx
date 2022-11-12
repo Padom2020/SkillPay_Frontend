@@ -8,7 +8,12 @@ import Layout from "../../components/freelancer/Layout";
 import Search from "../../components/Search";
 import { BsBriefcase } from "react-icons/bs";
 import Select from "../../components/Select";
-import ReactApexChart from "react-apexcharts";
+//import ReactApexChart from "react-apexcharts";
+import dynamic from "next/dynamic";
+
+const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+  ssr: false
+})
 
 const Projects = () => {
   const [searchFilters, setSearchFilters] = useState({
@@ -18,26 +23,86 @@ const Projects = () => {
   })
   const [chart, setChart] = useState({
     options: {
-      chart: {
-        id: 'apexchart-example'
-      },
-      xaxis: {
-        categories: ["1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct"]
-      },
-      fill: {
-        type: "solid",
-      },
-      colors: ["#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726"],
+       chart: {
+          id: 'apexchart-example',
+       },
+       plotOptions: {
+          bar: {
+             horizontal: false,
+             columnWidth: '25%',
+             endingShape: 'rounded-lg',
+          },
+       },
+       legend: {
+          position: 'top',
+       },
+      //  title: {
+      //     text: 'Payroll Summary',
+      //     style: {
+      //        fontSize: '14px',
+      //     },
+      //  },
+       stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent'],
+       },
+       yaxis: {
+          title: {
+             text: '$ (thousands)',
+          },
+       },
+       colors: ['#170455', '#F24726'],
       dataLabels: {
         enabled: false
       },
-      
+       fill: {
+          opacity: 1,
+       },
+       tooltip: {
+          y: {
+             formatter: function (val) {
+                return '$ ' + val + ' thousands';
+             },
+          },
+       },
+       xaxis: {
+        categories: ["1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct"]
+      },
     },
-    series: [{
-      name: 'Earnings',
-      data: [0, 30, 10, 35, 15, 40, 50, 65, 45, 65, 70, 0]
-    }]
-  });
+    series: [
+       {
+          name: 'Taxes',
+          data: [44, 55, 57, 56, 61, 58, 63, 40, 50, 80, 49, 90],
+       },
+       {
+          name: 'Revenue',
+          data: [76, 85, 101, 98, 87, 105, 91, 89, 38, 87, 100, 45],
+       },
+    ],
+ });
+  // const [chart, setChart] = useState({
+  //   options: {
+  //     chart: {
+  //       id: 'apexchart-example'
+  //     },
+  //     xaxis: {
+  //       categories: ["1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct"]
+  //     },
+  //     fill: {
+  //       type: "solid",
+  //     },
+  //     colors: ["#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726"],
+  //     dataLabels: {
+  //       enabled: false
+  //     },
+      
+  //   },
+  //   series: [{
+  //     name: 'Earnings',
+  //     data: [0, 30, 10, 35, 15, 40, 50, 65, 45, 65, 70, 0]
+  //   }]
+  // });
   const onChange = (filter: string) => (evt: React.MouseEvent) => {
     const target = evt.target as Element;
     const targetValue = target.getAttribute("value");
@@ -205,7 +270,13 @@ const Projects = () => {
         {/* CHART */}
         <div className="border rounded-md p-2">
           <h2 className="flex items-center space-x-3 text-[#170455] font-[700] text-[20px]"><span>Total Projects</span><span>87</span></h2>
-          <ReactApexChart type="bar" series={chart.series} options={chart.options} height={300} />
+          <ReactApexChart
+            type='bar'
+            series={chart.series}
+            // @ts-expect-error
+            options={chart.options}
+            height={300}
+          />
         </div>
         <div className="w-[100%] md:w-[75%] lg:w-[55%] mt-4 mb-2">
           <Search placeholder="Search  project" />
