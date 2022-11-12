@@ -81,28 +81,6 @@ const Projects = () => {
        },
     ],
  });
-  // const [chart, setChart] = useState({
-  //   options: {
-  //     chart: {
-  //       id: 'apexchart-example'
-  //     },
-  //     xaxis: {
-  //       categories: ["1 Oct", "2 Oct", "3 Oct", "4 Oct", "5 Oct", "6 Oct", "7 Oct", "8 Oct", "9 Oct", "10 Oct", "11 Oct", "12 Oct"]
-  //     },
-  //     fill: {
-  //       type: "solid",
-  //     },
-  //     colors: ["#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726", "#F24726"],
-  //     dataLabels: {
-  //       enabled: false
-  //     },
-      
-  //   },
-  //   series: [{
-  //     name: 'Earnings',
-  //     data: [0, 30, 10, 35, 15, 40, 50, 65, 45, 65, 70, 0]
-  //   }]
-  // });
   const onChange = (filter: string) => (evt: React.MouseEvent) => {
     const target = evt.target as Element;
     const targetValue = target.getAttribute("value");
