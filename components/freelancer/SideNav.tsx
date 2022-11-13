@@ -63,6 +63,16 @@ const SideNav = () => {
         </Link>
       </div>
       <div className="hover:cursor-pointer">
+        <Link href={"/freelancer/products"}>
+          <a className="flex items-center space-x-2">
+            <span className={classNames("p-[2px]", {
+              "bg-orange text-white": router.pathname === "/freelancer/products"
+            })}><AiOutlineCreditCard /></span>
+            <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/freelancer/products"})}>Products</span>
+          </a>
+        </Link>
+      </div>
+      <div className="hover:cursor-pointer">
         <Link href={"/freelancer/projects"}>
           <a className="flex items-center space-x-2">
             <span className={classNames("p-[2px]", {
