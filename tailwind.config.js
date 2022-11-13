@@ -16,6 +16,10 @@ module.exports = {
             gray3: "rgba(2, 6, 72, 0.1)",
             gray4: "rgba(8, 8, 18, 0.7)",
             gray5: "rgba(105, 155, 247, 0.21)",
+            gray6: "rgba(112, 204, 64, 0.21)",
+            gray7: "rgba(252, 3, 3, 0.21)",
+            gray8: "rgba(255, 255, 255, 0.22)",
+            gray9: "rgba(255, 61, 0, 0.2)",
 
          },
          zIndex: {
