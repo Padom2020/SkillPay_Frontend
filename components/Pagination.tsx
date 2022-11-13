@@ -2,7 +2,7 @@ import { VscArrowSmallLeft, VscArrowSmallRight } from "react-icons/vsc";
 
 const Pagination = () => {
   return (
-    <div className="flex items-center space-x-3 pr-10">
+    <div className="flex items-center space-x-3 md:pr-10">
       <div className="w-7 h-7 flex items-center justify-center hover:cursor-pointer">
         <span className="text-2xl rounded-full border border-[#020648]"><VscArrowSmallLeft /></span>
       </div>

@@ -37,7 +37,7 @@ const Freelancer = ({freelancer, handleViewProfile}: Props) => {
         }
       </div>
       <div className="my-2 text-xs truncate-line-clamp text-[rgba(8, 8, 18, 0.7)] md:text-[14px] font-[400]">{freelancer.Bio}</div>
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex flex-col md:flex-row items-center space-y-1 md:space-y-0 md:space-x-1 justify-between mb-4">
         <div className="flex items-center space-x-2">
           {
             freelancer.verified && <div><BsCheckCircle className="text-[#0CA789]" /></div>
@@ -49,8 +49,8 @@ const Freelancer = ({freelancer, handleViewProfile}: Props) => {
         </div>
         <div><FreelancerRating rating={freelancer.rating} /></div>
       </div>
-      <div className="flex items-center space-x-3 justify-between">
-        <div className="border-2 border-orange py-[2px] px-3 rounded-lg flex items-center space-x-3 text-orange hover:cursor-pointer hover:shadow-md" onClick={handleMsgClick}>
+      <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-3 justify-between">
+        <div className="border-2 border-orange py-[2px] px-5 md:px-3 rounded-lg flex items-center space-x-3 text-orange hover:cursor-pointer hover:shadow-md" onClick={handleMsgClick}>
           <span><BiMessageAltDetail /></span>
           <span>Message</span>
         </div>

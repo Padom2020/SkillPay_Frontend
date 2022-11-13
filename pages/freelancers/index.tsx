@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BsBarChart } from "react-icons/bs";
 import { MdAccessTime, MdWorkOutline } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
-import { VscArrowSmallLeft, VscArrowSmallRight } from "react-icons/vsc";
+// import { VscArrowSmallLeft, VscArrowSmallRight } from "react-icons/vsc";
 import Freelancer from "../../components/Freelancer";
 import Layout from "../../components/Layout";
 import Pagination from "../../components/Pagination";
@@ -48,8 +48,8 @@ const Index = () => {
         <div className="w-[100%] md:w-[65%] lg:w-[50%]">
           <Search placeholder="Search through our talent pool" />
         </div>
-        <div className="flex md:space-x-6 space-y-6 md:space-y-0 my-4">
-          <div className="w-[90%] md:w-[50%] lg:w-[20%] mx-auto md:mx-0">
+        <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 my-4">
+          <div className="w-[100%] md:w-[50%] lg:w-[20%] mx-auto md:mx-0">
             <Select value={selectForm.skill} placeHolder="Job Type" icon={<MdWorkOutline />} onChange={onChange("skill")}>
               <option value="Web Design" className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Web Design</option>
               <option value={"Front End"} className='hover:cursor-pointer hover:bg-orange hover:text-white pl-3 py-1'>Front End Development</option>
@@ -95,7 +95,7 @@ const Index = () => {
             }
           </div>
         </div>
-        <div className="flex justify-end py-14">
+        <div className="flex justify-center md:justify-end py-14">
           <Pagination />
         </div>
       </div>
