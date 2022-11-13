@@ -9,9 +9,9 @@ import { BsBarChart } from 'react-icons/bs';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import dynamic from 'next/dynamic';
 
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
-   ssr: false
-})
+const ReactApexChart = dynamic(() => import('react-apexcharts'), {
+   ssr: false,
+});
 
 const Payroll = () => {
    //data for payroll

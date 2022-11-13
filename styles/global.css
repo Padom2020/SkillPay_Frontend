@@ -5,39 +5,36 @@
    overflow: hidden;
 }
 
-.ql-editor{
-   min-height:100px;
+.ql-editor {
+   min-height: 100px;
 }
 
 .progress {
    width: 0%;
-   background-color: #F24726
+   background-color: #f24726;
 }
 
 .first-badge::after {
-   border-left: 40px solid #F24726;
+   border-left: 40px solid #f24726;
    border-top: 30px solid transparent;
    border-bottom: 30px solid transparent;
-   content: "";
+   content: '';
    height: 0;
    right: -40px;
    position: absolute;
    width: 0;
- }
+}
 
- .third-badge::before {
+.third-badge::before {
    border-right: 40px solid rgba(2, 6, 72, 0.1);
    border-top: 30px solid transparent;
    border-bottom: 30px solid transparent;
-   content: "";
+   content: '';
    height: 0;
    left: -40px;
    position: absolute;
    width: 0;
- }
-
-
-
+}
 
 @tailwind base;
 @tailwind components;
