@@ -67,16 +67,6 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
               </Link>
             </div>
             <div className={classNames("hover:cursor-pointer text-white", {
-              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/profile"
-            })}>
-              <Link href={"/emplpyer/profile"}>
-                <a className="flex items-center space-x-2">
-                  <span className="p-[2px]"><BiUser /></span>
-                  <span>Profile</span>
-                </a>
-              </Link>
-            </div>
-            <div className={classNames("hover:cursor-pointer text-white", {
               "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/candidates"
             })}>
               <Link href={"/emplpyer/candidates"}>
@@ -113,16 +103,6 @@ const MobileSideNav = ({showMenu, setShowMenu}: Props) => {
                 <a className="flex items-center space-x-2">
                   <span className="p-[2px]"><AiOutlineCreditCard /></span>
                   <span>Projects</span>
-                </a>
-              </Link>
-            </div>
-            <div className={classNames("hover:cursor-pointer text-white", {
-              "bg-orange font-[500] px-2 rounded-md mr-6": router.pathname === "/employer/account"
-            })}>
-              <Link href={"/employer/account"}>
-                <a className="flex items-center space-x-2">
-                  <span className="p-[2px]"><AiOutlineVerified /></span>
-                  <span>Account</span>
                 </a>
               </Link>
             </div>

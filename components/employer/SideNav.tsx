@@ -43,16 +43,6 @@ const SideNav = () => {
         </Link>
       </div>
       <div className="hover:cursor-pointer">
-        <Link href={"/employer/profile"}>
-          <a className="flex items-center space-x-2">
-            <span className={classNames("p-[2px]", {
-              "bg-orange text-white": router.pathname === "/employer/profile"
-            })}><BiUser /></span>
-            <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/employer/profile"})}>Profile</span>
-          </a>
-        </Link>
-      </div>
-      <div className="hover:cursor-pointer">
         <Link href={"/employer/candidates"}>
           <a className="flex items-center space-x-2">
             <span className={classNames("p-[2px]", {
@@ -89,16 +79,6 @@ const SideNav = () => {
               "bg-orange text-white": router.pathname === "/employer/projects"
             })}><AiOutlineCreditCard /></span>
             <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/employer/projects"})}>Projects</span>
-          </a>
-        </Link>
-      </div>
-      <div className="hover:cursor-pointer">
-        <Link href={"/employer/account"}>
-          <a className="flex items-center space-x-2">
-            <span className={classNames("p-[2px]", {
-              "bg-orange text-white": router.pathname === "/employer/account"
-            })}><AiOutlineVerified /></span>
-            <span className={classNames({"text-[#020648] font-[500]": router.pathname === "/employer/account"})}>Account</span>
           </a>
         </Link>
       </div>
