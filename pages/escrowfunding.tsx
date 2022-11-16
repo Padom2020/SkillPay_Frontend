@@ -1,10 +1,10 @@
 import AuthLayout from '../components/Auth/AuthLayout'
-import PurchasePoint from '../components/PurchasePoint';
+import EscrowFunding from '../components/EscrowFunding';
 
 function escrowfunding() {
   return (
     <AuthLayout>
-    <PurchasePoint/>
+    <EscrowFunding/>
   </AuthLayout>
   )
 }
